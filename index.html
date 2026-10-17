@@ -1,0 +1,314 @@
+<!doctype html>
+<!-- NOTE FOR THE OWNER: legal texts (terms.html, privacy.html, refund.html, distance.html, js/legal-texts.js) are drafts; have them reviewed by your lawyer / accountant before taking payments. Prices: edit prices.json. Checkout links: CHECKOUT at the top of js/site.js. -->
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Belnovia Studio | YouTube hikaye videolarını neredeyse kendiliğinden üretin</title>
+<meta name="description" content="Kanalı ve günü seç, başlığı onayla: Belnovia Studio hikâyeyi yazar, seslendirir, görselleri çizer, videoyu hazırlar ve YouTube'a planlı yükler. Windows için.">
+<meta name="theme-color" content="#090b13">
+<link rel="icon" type="image/png" sizes="32x32" href="img/icon-32.png">
+<link rel="apple-touch-icon" href="img/icon-256.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Belnovia Studio">
+<meta property="og:title" content="Belnovia Studio">
+<meta property="og:description" content="Long-form YouTube story videos, almost automatically. Pick a channel and a day, choose a title; the app writes, voices, illustrates, renders and uploads. For Windows.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jakarta.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">İçeriğe geç</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top" aria-label="Belnovia Studio">
+      <img src="img/emblem-sm.png" width="32" height="36" alt="">
+      <span>Belnovia<b>Studio</b></span>
+    </a>
+    <nav class="nav" aria-label="Ana menü">
+      <a href="#how" data-i18n="nav.how">Nasıl çalışır</a>
+      <a href="#features" data-i18n="nav.features">Özellikler</a>
+      <a href="#screens" data-i18n="nav.shots">Ekranlar</a>
+      <a href="#pricing" data-i18n="nav.pricing">Fiyat</a>
+      <a href="#faq" data-i18n="nav.faq">Sorular</a>
+      <a href="#contact" data-i18n="nav.contact">İletişim</a>
+    </nav>
+    <div class="top-act">
+      <label class="lang">
+        <span class="sr" data-i18n="lang.label">Dil</span>
+        <select id="lang-select"></select>
+      </label>
+      <a class="btn btn-sm" href="#download" data-i18n="nav.download">İndir</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1 data-i18n="hero.title">Başlığı sen seç. Uzun hikâye videosunu Belnovia Studio hazırlasın.</h1>
+        <p class="lead" data-i18n="hero.sub"></p>
+        <div class="cta-row">
+          <a class="btn btn-primary dl-link" href="#download" data-i18n="hero.cta">Ücretsiz dene, Windows için indir</a>
+          <a class="btn btn-ghost" href="#pricing" data-i18n="hero.cta2">Fiyatları gör</a>
+        </div>
+        <p class="trial-note" data-i18n="hero.trial"></p>
+      </div>
+
+      <figure class="line" aria-labelledby="line-cap">
+        <figcaption id="line-cap" class="line-cap" data-i18n="line.label">Bir videonun üretim hattı</figcaption>
+        <div class="line-owners" aria-hidden="true">
+          <span class="own own-you" data-i18n="line.you">Sen</span>
+          <span class="own own-app" data-i18n="line.app">Program</span>
+        </div>
+        <ol class="line-track">
+          <li class="seg you"><i></i><span data-i18n="line.s1"></span></li>
+          <li class="seg you"><i></i><span data-i18n="line.s2"></span></li>
+          <li class="seg"><i></i><span data-i18n="line.s3"></span></li>
+          <li class="seg"><i></i><span data-i18n="line.s4"></span></li>
+          <li class="seg"><i></i><span data-i18n="line.s5"></span></li>
+          <li class="seg"><i></i><span data-i18n="line.s6"></span></li>
+          <li class="seg"><i></i><span data-i18n="line.s7"></span></li>
+          <li class="seg"><i></i><span data-i18n="line.s8"></span></li>
+          <li class="seg"><i></i><span data-i18n="line.s9"></span></li>
+        </ol>
+      </figure>
+
+      <div class="window hero-shot">
+        <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+        <picture>
+          <source media="(max-width: 760px)" srcset="img/shot-titles-m.webp" width="860" height="760">
+          <img src="img/shot-titles.webp" width="1440" height="1000" data-i18n-alt="hero.shotAlt" alt="">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="sec" id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <h2 id="how-h" data-i18n="how.title">Nasıl çalışır</h2>
+      <p class="sec-lead" data-i18n="how.lead"></p>
+      <ol class="steps">
+        <li class="step you">
+          <span class="step-n" aria-hidden="true">1</span>
+          <span class="step-who" data-i18n="line.you">Sen</span>
+          <h3 data-i18n="how.1t"></h3>
+          <p data-i18n="how.1d"></p>
+        </li>
+        <li class="step you">
+          <span class="step-n" aria-hidden="true">2</span>
+          <span class="step-who" data-i18n="line.you">Sen</span>
+          <h3 data-i18n="how.2t"></h3>
+          <p data-i18n="how.2d"></p>
+        </li>
+        <li class="step">
+          <span class="step-n" aria-hidden="true">3</span>
+          <span class="step-who" data-i18n="line.app">Program</span>
+          <h3 data-i18n="how.3t"></h3>
+          <p data-i18n="how.3d"></p>
+        </li>
+        <li class="step">
+          <span class="step-n" aria-hidden="true">4</span>
+          <span class="step-who" data-i18n="line.app">Program</span>
+          <h3 data-i18n="how.4t"></h3>
+          <p data-i18n="how.4d"></p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="sec" id="features" aria-labelledby="feat-h">
+    <div class="wrap">
+      <h2 id="feat-h" data-i18n="feat.title"></h2>
+      <div class="fgroups">
+        <div class="fgroup">
+          <h3 data-i18n="feat.g1"></h3>
+          <dl class="flist">
+            <div><dt data-i18n="feat.ai.t"></dt><dd data-i18n="feat.ai.d"></dd></div>
+            <div><dt data-i18n="feat.rules.t"></dt><dd data-i18n="feat.rules.d"></dd></div>
+            <div><dt data-i18n="feat.group.t"></dt><dd data-i18n="feat.group.d"></dd></div>
+            <div><dt data-i18n="feat.meta.t"></dt><dd data-i18n="feat.meta.d"></dd></div>
+          </dl>
+        </div>
+        <div class="fgroup">
+          <h3 data-i18n="feat.g2"></h3>
+          <dl class="flist">
+            <div><dt data-i18n="feat.cover.t"></dt><dd data-i18n="feat.cover.d"></dd></div>
+            <div><dt data-i18n="feat.voice.t"></dt><dd data-i18n="feat.voice.d"></dd></div>
+            <div><dt data-i18n="feat.images.t"></dt><dd data-i18n="feat.images.d"></dd></div>
+            <div><dt data-i18n="feat.render.t"></dt><dd data-i18n="feat.render.d"></dd></div>
+          </dl>
+        </div>
+        <div class="fgroup">
+          <h3 data-i18n="feat.g3"></h3>
+          <dl class="flist">
+            <div><dt data-i18n="feat.upload.t"></dt><dd data-i18n="feat.upload.d"></dd></div>
+            <div><dt data-i18n="feat.cal.t"></dt><dd data-i18n="feat.cal.d"></dd></div>
+          </dl>
+        </div>
+        <div class="fgroup">
+          <h3 data-i18n="feat.g4"></h3>
+          <dl class="flist">
+            <div><dt data-i18n="feat.cost.t"></dt><dd data-i18n="feat.cost.d"></dd></div>
+            <div><dt data-i18n="feat.backup.t"></dt><dd data-i18n="feat.backup.d"></dd></div>
+            <div><dt data-i18n="feat.phone.t"></dt><dd data-i18n="feat.phone.d"></dd></div>
+            <div><dt data-i18n="feat.support.t"></dt><dd data-i18n="feat.support.d"></dd></div>
+            <div><dt data-i18n="feat.lang.t"></dt><dd data-i18n="feat.lang.d"></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="sec" id="screens" aria-labelledby="shots-h">
+    <div class="wrap">
+      <h2 id="shots-h" data-i18n="shots.title"></h2>
+      <p class="sec-lead" data-i18n="shots.lead"></p>
+      <div class="tabs" role="tablist" aria-labelledby="shots-h">
+        <button role="tab" id="t-new" aria-controls="p-shot" aria-selected="true" data-shot="new" data-i18n="shots.new"></button>
+        <button role="tab" id="t-titles" aria-controls="p-shot" aria-selected="false" tabindex="-1" data-shot="titles" data-i18n="shots.titles"></button>
+        <button role="tab" id="t-cal" aria-controls="p-shot" aria-selected="false" tabindex="-1" data-shot="cal" data-i18n="shots.cal"></button>
+        <button role="tab" id="t-rules" aria-controls="p-shot" aria-selected="false" tabindex="-1" data-shot="rules" data-i18n="shots.rules"></button>
+        <button role="tab" id="t-cost" aria-controls="p-shot" aria-selected="false" tabindex="-1" data-shot="cost" data-i18n="shots.cost"></button>
+      </div>
+      <figure class="shot" id="p-shot" role="tabpanel" aria-labelledby="t-new" tabindex="0">
+        <div class="window">
+          <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          <img id="shot-img" src="img/shot-new.webp" width="1440" height="900" alt="" loading="lazy">
+        </div>
+        <figcaption id="shot-cap"></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="sec" id="pricing" aria-labelledby="price-h">
+    <div class="wrap">
+      <h2 id="price-h" data-i18n="price.title"></h2>
+      <p class="sec-lead" data-i18n="price.lead"></p>
+      <div class="plans">
+        <article class="plan plan-trial" aria-labelledby="pl-trial">
+          <h3 id="pl-trial" data-i18n="price.trial"></h3>
+          <p class="plan-price"><span data-i18n="price.trialPrice"></span></p>
+          <p class="plan-sub" data-i18n="price.trialSub"></p>
+          <p class="plan-note" data-i18n="price.trialNote"></p>
+          <a class="btn btn-primary dl-link" href="#download" data-i18n="price.trialCta"></a>
+        </article>
+        <article class="plan" aria-labelledby="pl-month">
+          <h3 id="pl-month" data-i18n="price.monthly"></h3>
+          <p class="plan-price" data-price="monthly"></p>
+          <p class="plan-sub" data-i18n="price.monthlySub"></p>
+          <ul class="plan-inc">
+            <li data-i18n="price.inc1"></li><li data-i18n="price.inc2"></li><li data-i18n="price.inc3"></li>
+          </ul>
+          <a class="btn btn-ghost buy" href="#download" data-plan="monthly" data-i18n="price.buy"></a>
+        </article>
+        <article class="plan" aria-labelledby="pl-year">
+          <h3 id="pl-year"><span data-i18n="price.yearly"></span> <span class="tag" data-price="yearlyNote" hidden></span></h3>
+          <p class="plan-price" data-price="yearly"></p>
+          <p class="plan-sub" data-i18n="price.yearlySub"></p>
+          <ul class="plan-inc">
+            <li data-i18n="price.inc1"></li><li data-i18n="price.inc2"></li><li data-i18n="price.inc3"></li>
+          </ul>
+          <a class="btn btn-ghost buy" href="#download" data-plan="yearly" data-i18n="price.buyYear"></a>
+        </article>
+      </div>
+      <div class="price-notes">
+        <p data-i18n="price.how"></p>
+        <p data-i18n="price.ext"></p>
+        <p data-price="currencyNote" hidden></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section class="sec" id="download" aria-labelledby="dl-h">
+    <div class="wrap">
+      <div class="dl">
+        <img class="dl-emblem" src="img/emblem.png" width="140" height="156" alt="">
+        <div class="dl-body">
+          <h2 id="dl-h" data-i18n="dl.title"></h2>
+          <p data-i18n="dl.lead"></p>
+          <a class="btn btn-primary btn-lg" id="dl-btn" href="https://github.com/servicescriptorium/belnovia-studio/releases/latest/download/BelnoviaStudio.exe" data-i18n="dl.btn">BelnoviaStudio.exe indir</a>
+          <p class="dl-note" data-i18n="dl.note"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq" aria-labelledby="faq-h">
+    <div class="wrap faq-wrap">
+      <h2 id="faq-h" data-i18n="faq.title"></h2>
+      <div class="faq">
+        <details><summary data-i18n="faq.q1"></summary><p data-i18n="faq.a1"></p></details>
+        <details><summary data-i18n="faq.q2"></summary><p data-i18n="faq.a2"></p></details>
+        <details><summary data-i18n="faq.q3"></summary><p data-i18n="faq.a3"></p></details>
+        <details><summary data-i18n="faq.q4"></summary><p data-i18n="faq.a4"></p></details>
+        <details><summary data-i18n="faq.q5"></summary><p data-i18n="faq.a5"></p></details>
+        <details><summary data-i18n="faq.q6"></summary><p data-i18n="faq.a6"></p></details>
+        <details><summary data-i18n="faq.q7"></summary><p><span data-i18n="faq.a7"></span> <a href="refund.html" data-i18n="foot.refund"></a></p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP (soft, coming soon) -->
+  <section class="sec sec-soon" aria-labelledby="soon-h">
+    <div class="wrap soon">
+      <div>
+        <h2 id="soon-h" data-i18n="soon.title"></h2>
+        <p data-i18n="soon.lead"></p>
+      </div>
+      <ul>
+        <li data-i18n="soon.1"></li>
+        <li data-i18n="soon.2"></li>
+        <li data-i18n="soon.3"></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec" id="contact" aria-labelledby="contact-h">
+    <div class="wrap contact">
+      <div>
+        <h2 id="contact-h" data-i18n="contact.title"></h2>
+        <p data-i18n="contact.lead"></p>
+      </div>
+      <div class="contact-mail">
+        <a class="mail" href="mailto:servicescriptorium@gmail.com">servicescriptorium@gmail.com</a>
+        <a class="btn btn-ghost" href="mailto:servicescriptorium@gmail.com" data-i18n="contact.mail"></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <img src="img/emblem-sm.png" width="28" height="31" alt="">
+      <span>© <span class="year">2026</span> Belnovia Studio. <span data-i18n="foot.rights"></span></span>
+    </div>
+    <nav class="foot-nav" aria-label="Legal">
+      <a href="terms.html" data-i18n="foot.terms"></a>
+      <a href="privacy.html" data-i18n="foot.privacy"></a>
+      <a href="refund.html" data-i18n="foot.refund"></a>
+      <a href="distance.html" data-i18n="foot.distance"></a>
+      <a href="mailto:servicescriptorium@gmail.com">servicescriptorium@gmail.com</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

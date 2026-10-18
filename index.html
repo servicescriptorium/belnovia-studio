@@ -191,6 +191,22 @@
     </div>
   </section>
 
+  <!-- SAMPLE VIDEO (hidden unless js/site-config.js names a video) -->
+  <section class="sec sample-sec" id="sample" aria-labelledby="sample-h" hidden>
+    <div class="wrap">
+      <h2 id="sample-h" data-i18n="sample.title"></h2>
+      <p class="sec-lead" data-i18n="sample.lead"></p>
+      <div class="sample" id="sample-box">
+        <button type="button" class="sample-play" id="sample-play">
+          <span class="sample-poster" id="sample-poster" aria-hidden="true"></span>
+          <span class="sample-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+          <span class="sample-label" data-i18n="sample.play"></span>
+        </button>
+      </div>
+      <p class="sample-note" id="sample-note" data-i18n="sample.yt"></p>
+    </div>
+  </section>
+
   <!-- PRICING -->
   <section class="sec" id="pricing" aria-labelledby="price-h">
     <div class="wrap">
@@ -228,6 +244,19 @@
         <p data-i18n="price.ext"></p>
         <p data-price="currencyNote" hidden></p>
       </div>
+      <div class="costs" id="costs" aria-labelledby="costs-h">
+        <div class="costs-head">
+          <h3 id="costs-h" data-i18n="costs.title"></h3>
+          <p data-i18n="costs.lead"></p>
+        </div>
+        <dl class="costs-list">
+          <div><dt data-i18n="costs.aiH"></dt><dd data-i18n="costs.aiP"></dd></div>
+          <div><dt data-i18n="costs.imgH"></dt><dd data-i18n="costs.imgP"></dd></div>
+          <div><dt data-i18n="costs.voiceH"></dt><dd><span data-i18n="costs.voiceP"></span> <a href="https://lumean.net/en" rel="noopener" target="_blank">lumean.net</a></dd></div>
+          <div><dt data-i18n="costs.ytH"></dt><dd data-i18n="costs.ytP"></dd></div>
+        </dl>
+        <a class="costs-more" href="kurulum.html" data-i18n="costs.more"></a>
+      </div>
     </div>
   </section>
 
@@ -241,6 +270,7 @@
           <p data-i18n="dl.lead"></p>
           <a class="btn btn-primary btn-lg" id="dl-btn" href="https://github.com/servicescriptorium/belnovia-studio/releases/latest/download/BelnoviaStudio.exe" data-i18n="dl.btn">BelnoviaStudio.exe indir</a>
           <p class="dl-note" data-i18n="dl.note"></p>
+          <p class="dl-note"><a href="kurulum.html" data-i18n="dl.setup"></a></p>
         </div>
       </div>
     </div>
@@ -257,6 +287,7 @@
         <details><summary data-i18n="faq.q4"></summary><p data-i18n="faq.a4"></p></details>
         <details><summary data-i18n="faq.q5"></summary><p data-i18n="faq.a5"></p></details>
         <details><summary data-i18n="faq.q6"></summary><p data-i18n="faq.a6"></p></details>
+        <details><summary data-i18n="faq.q8"></summary><p><span data-i18n="faq.a8"></span> <a href="kurulum.html" data-i18n="foot.setup"></a></p></details>
         <details><summary data-i18n="faq.q7"></summary><p><span data-i18n="faq.a7"></span> <a href="refund.html" data-i18n="foot.refund"></a></p></details>
       </div>
     </div>
@@ -303,11 +334,13 @@
       <a href="privacy.html" data-i18n="foot.privacy"></a>
       <a href="refund.html" data-i18n="foot.refund"></a>
       <a href="distance.html" data-i18n="foot.distance"></a>
+      <a href="kurulum.html" data-i18n="foot.setup"></a>
       <a href="mailto:servicescriptorium@gmail.com">servicescriptorium@gmail.com</a>
     </nav>
   </div>
 </footer>
 
+<script src="js/site-config.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/site.js"></script>
 </body>

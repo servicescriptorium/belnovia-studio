@@ -46,15 +46,18 @@ var DOWNLOAD_URL = "https://github.com/servicescriptorium/belnovia-studio/releas
     document.documentElement.lang = lang;
     document.querySelectorAll("[data-i18n]").forEach(function (el) { el.textContent = t(el.getAttribute("data-i18n")); });
     document.querySelectorAll("[data-i18n-alt]").forEach(function (el) { el.alt = t(el.getAttribute("data-i18n-alt")); });
-    var doc = document.body.getAttribute("data-legal");
+    var doc = document.body.getAttribute("data-legal"), page = document.body.getAttribute("data-page");
     if (doc) {
       renderLegal(doc);
+    } else if (page) {
+      document.title = t(page + ".title") + " | Belnovia Studio";
     } else {
       document.title = t("meta.title");
       var md = document.querySelector('meta[name="description"]');
       if (md) md.setAttribute("content", t("meta.desc"));
       renderPrices();
       setShot(currentShot);
+      renderSample();
     }
     setBuyLinks();
   }
@@ -137,6 +140,57 @@ var DOWNLOAD_URL = "https://github.com/servicescriptorium/belnovia-studio/releas
     window.addEventListener("load", function () {
       setTimeout(function () { Object.keys(SHOTS).forEach(function (k) { var i = new Image(); i.src = SHOTS[k]; }); }, 1500);
     });
+  }
+
+  /* ---------- sample video (js/site-config.js) ---------- */
+  function byLang(v) {
+    if (!v) return "";
+    if (typeof v === "string") return v.trim();
+    return String(v[lang] || v.en || v[Object.keys(v)[0]] || "").trim();
+  }
+  var samplePlaying = false, sampleFile = "";
+  function renderSample() {
+    var sec = document.getElementById("sample");
+    if (!sec) return;
+    var id = String(window.SAMPLE_VIDEO_ID || "").trim();
+    if (!/^[A-Za-z0-9_-]{6,20}$/.test(id)) id = "";
+    var file = id ? "" : byLang(window.DEMO_VIDEO);
+    sec.hidden = !id && !file;
+    if (sec.hidden) return;
+    var box = document.getElementById("sample-box");
+    var note = document.getElementById("sample-note");
+    if (note) note.hidden = !id;
+    if (file) {
+      if (file === sampleFile) return; // keep playback when only the language of other texts changed
+      sampleFile = file;
+      var v = document.createElement("video");
+      v.controls = true; v.preload = "none"; v.playsInline = true;
+      var poster = byLang(window.DEMO_POSTER);
+      if (poster) v.poster = poster;
+      v.src = file;
+      v.setAttribute("aria-label", t("sample.title"));
+      box.innerHTML = ""; box.appendChild(v);
+      return;
+    }
+    if (samplePlaying) { var f = box.querySelector("iframe"); if (f) f.title = t("sample.title"); return; }
+    var p = document.getElementById("sample-poster");
+    var img = String(window.SAMPLE_POSTER || "").trim();
+    if (p && img) p.style.backgroundImage = "url(\"" + img.replace(/"/g, "") + "\")";
+    var btn = document.getElementById("sample-play");
+    if (btn && !btn.dataset.bound) {
+      btn.dataset.bound = "1";
+      btn.addEventListener("click", function () {
+        samplePlaying = true;
+        var f = document.createElement("iframe");
+        f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(id) + "?autoplay=1&rel=0&modestbranding=1";
+        f.title = t("sample.title");
+        f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+        f.allowFullscreen = true;
+        f.referrerPolicy = "strict-origin-when-cross-origin";
+        box.innerHTML = ""; box.appendChild(f);
+        f.focus();
+      });
+    }
   }
 
   /* ---------- legal pages ---------- */

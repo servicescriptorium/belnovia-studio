@@ -71,7 +71,7 @@
     moreinfo: C("Ek bilgi", "More info", "Weitere Informationen", "Más información", "Informations complémentaires", "Mais informações"),
     runany: C("Yine de çalıştır", "Run anyway", "Trotzdem ausführen", "Ejecutar de todas formas", "Exécuter quand même", "Executar mesmo assim"),
     dontrun: C("Çalıştırma", "Don't run", "Nicht ausführen", "No ejecutar", "Ne pas exécuter", "Não executar"),
-    appline: C("Uygulama: BelnoviaStudio.exe", "App: BelnoviaStudio.exe", "App: BelnoviaStudio.exe", "Aplicación: BelnoviaStudio.exe", "Application : BelnoviaStudio.exe", "Aplicação: BelnoviaStudio.exe"),
+    appline: C("Uygulama: BelnoviaStudio-Kurulum.exe", "App: BelnoviaStudio-Kurulum.exe", "App: BelnoviaStudio-Kurulum.exe", "Aplicación: BelnoviaStudio-Kurulum.exe", "Application : BelnoviaStudio-Kurulum.exe", "Aplicação: BelnoviaStudio-Kurulum.exe"),
     downloads: C("İndirilenler", "Downloads", "Downloads", "Descargas", "Téléchargements", "Transferências"),
     gwarn: C("Google bu uygulamayı doğrulamadı", "Google hasn't verified this app", "Google hat diese App nicht überprüft", "Google no ha verificado esta aplicación", "Google n'a pas validé cette application", "A Google não validou esta app"),
     gwarnbody: C("Bu uygulamayı kendi Google Cloud projende sen oluşturdun.", "You created this app in your own Google Cloud project.", "Du hast diese App in deinem eigenen Google-Cloud-Projekt erstellt.", "Creaste esta aplicación en tu propio proyecto de Google Cloud.", "Tu as créé cette application dans ton propre projet Google Cloud.", "Criaste esta app no teu próprio projeto Google Cloud."),
@@ -411,15 +411,15 @@
     // WINDOWS ---------------------------------------------------------
     g.windows = {
       dd: 6.8,
-      title: C("Windows uyarısı", "The Windows warning", "Die Windows-Warnung", "El aviso de Windows", "L'avertissement de Windows", "O aviso do Windows"),
+      title: C("Programı kurmak", "Installing the program", "Das Programm installieren", "Instalar el programa", "Installer le programme", "Instalar o programa"),
       sub: C("\"Windows bilgisayarınızı korudu\" çıkarsa ne yapılır", "What to do when \"Windows protected your PC\" appears", "Was tun, wenn \"Der Computer wurde durch Windows geschützt\" erscheint", "Qué hacer si aparece \"Windows protegió su PC\"", "Que faire si « Windows a protégé votre ordinateur » s'affiche", "O que fazer quando aparece \"O Windows protegeu o computador\""),
       end: C("Program açıldı. Hesabını oluşturabilirsin.", "The program is open. You can create your account.", "Das Programm ist offen. Du kannst dein Konto anlegen.", "El programa está abierto. Ya puedes crear tu cuenta.", "Le programme est ouvert. Tu peux créer ton compte.", "O programa está aberto. Já podes criar a tua conta."),
       steps: [
         { scene: "dl", els: frame("ex", { title: W.downloads }, true).concat([
-            { id: "f1", k: "file", x: WX + 60, y: CY + 30, w: 640, h: 64, t: "BelnoviaStudio.exe" },
+            { id: "f1", k: "file", x: WX + 60, y: CY + 30, w: 640, h: 64, t: "BelnoviaStudio-Kurulum.exe" },
             { id: "f2", k: "row", x: WX + 60, y: CY + 110, w: 640, h: 56, t: "", cls: "light" }
           ]), target: "f1",
-          cap: C("İndirdiğin BelnoviaStudio.exe'ye çift tıkla.", "Double-click the BelnoviaStudio.exe you downloaded.", "Doppelklicke auf die heruntergeladene BelnoviaStudio.exe.", "Haz doble clic en el BelnoviaStudio.exe que descargaste.", "Double-clique sur le BelnoviaStudio.exe téléchargé.", "Faz duplo clique no BelnoviaStudio.exe que transferiste.") },
+          cap: C("İndirdiğin BelnoviaStudio-Kurulum.exe'ye çift tıkla.", "Double-click the BelnoviaStudio-Kurulum.exe you downloaded.", "Doppelklicke auf die heruntergeladene BelnoviaStudio-Kurulum.exe.", "Haz doble clic en el BelnoviaStudio-Kurulum.exe que descargaste.", "Double-clique sur le BelnoviaStudio-Kurulum.exe téléchargé.", "Faz duplo clique no BelnoviaStudio-Kurulum.exe que transferiste.") },
         { scene: "ss", els: [
             { id: "ss", k: "dialog", x: 330, y: 90, w: 940, h: 620, cls: "win" },
             { id: "ss_t", k: "wintitle", x: 380, y: 140, w: 840, h: 110, t: W.winprot },
@@ -433,6 +433,22 @@
           cap: C("Yeni programlarda bu uyarı çıkabilir. Ek bilgi'ye tıkla.", "New programs can show this warning. Click More info.", "Neue Programme können diese Warnung zeigen. Klicke auf Weitere Informationen.", "Los programas nuevos pueden mostrar este aviso. Haz clic en Más información.", "Les nouveaux programmes peuvent afficher cet avertissement. Clique sur Informations complémentaires.", "Os programas novos podem mostrar este aviso. Clica em Mais informações.") },
         { target: "ss_run",
           cap: C("Yine de çalıştır'a bas.", "Press Run anyway.", "Drücke Trotzdem ausführen.", "Pulsa Ejecutar de todas formas.", "Clique sur Exécuter quand même.", "Carrega em Executar mesmo assim.") },
+        { scene: "inst", els: [
+            { id: "in_box", k: "dialog", x: 430, y: 110, w: 740, h: 560 },
+            { id: "in_logo", k: "logo", x: 763, y: 150, w: 74, h: 74 },
+            { id: "in_h", k: "h", x: 480, y: 250, w: 640, h: 50, t: C("Belnovia Studio kuruluyor", "Installing Belnovia Studio", "Belnovia Studio wird installiert", "Instalando Belnovia Studio", "Installation de Belnovia Studio", "Instalando o Belnovia Studio") },
+            { id: "in_l", k: "label", x: 480, y: 330, w: 640, h: 34, t: C("Kullanım koşullarını okudum ve kabul ediyorum", "I have read and accept the terms of use", "Ich akzeptiere die Nutzungsbedingungen", "Acepto las condiciones de uso", "J'accepte les conditions d'utilisation", "Aceito os termos de uso") },
+            { id: "in_b", k: "btn", x: 640, y: 560, w: 320, h: 58, t: C("Kur", "Install", "Installieren", "Instalar", "Installer", "Instalar"), cls: "primary" }
+          ], target: "in_b",
+          cap: C("Kurulum penceresinde koşulları kabul et ve Kur'a bas. Yönetici izni gerekmez.", "In the setup window accept the terms and press Install. No administrator rights needed.", "Im Installationsfenster die Bedingungen akzeptieren und auf Installieren klicken. Keine Administratorrechte nötig.", "En la ventana de instalación acepta las condiciones y pulsa Instalar. No hacen falta permisos de administrador.", "Dans la fenêtre d'installation, accepte les conditions et clique sur Installer. Aucun droit administrateur requis.", "Na janela de instalação, aceite os termos e clique em Instalar. Não precisa de permissão de administrador.") },
+        { scene: "inst2", els: [
+            { id: "in_box", k: "dialog", x: 430, y: 110, w: 740, h: 560 },
+            { id: "in_logo", k: "logo", x: 763, y: 150, w: 74, h: 74 },
+            { id: "in_h", k: "h", x: 480, y: 250, w: 640, h: 50, t: C("Belnovia Studio kuruldu", "Belnovia Studio is installed", "Belnovia Studio ist installiert", "Belnovia Studio está instalado", "Belnovia Studio est installé", "O Belnovia Studio foi instalado") },
+            { id: "in_l", k: "label", x: 480, y: 330, w: 640, h: 34, t: C("Belnovia Studio'yu şimdi aç", "Open Belnovia Studio now", "Belnovia Studio jetzt öffnen", "Abrir Belnovia Studio ahora", "Ouvrir Belnovia Studio maintenant", "Abrir o Belnovia Studio agora") },
+            { id: "in_f", k: "btn", x: 640, y: 560, w: 320, h: 58, t: C("Bitir", "Finish", "Fertigstellen", "Finalizar", "Terminer", "Concluir"), cls: "primary" }
+          ], target: "in_f",
+          cap: C("Bitir'e bas. Program Başlat menüsüne ve masaüstüne eklendi; güncellemeler artık kendiliğinden gelir.", "Press Finish. The program is in the Start menu and on the desktop; updates now arrive by themselves.", "Klicke auf Fertigstellen. Das Programm ist im Startmenü und auf dem Desktop; Updates kommen nun automatisch.", "Pulsa Finalizar. El programa está en el menú Inicio y en el escritorio; las actualizaciones llegan solas.", "Clique sur Terminer. Le programme est dans le menu Démarrer et sur le bureau ; les mises à jour arrivent toutes seules.", "Clique em Concluir. O programa está no menu Iniciar e na área de trabalho; as atualizações chegam sozinhas.") },
         { scene: "start", els: [
             { id: "st_box", k: "dialog", x: 560, y: 110, w: 480, h: 560 },
             { id: "st_logo", k: "logo", x: 763, y: 150, w: 74, h: 74 },

@@ -7,7 +7,7 @@
           the licence is then tied to the buyer's account automatically)
    intl = Paddle checkout link for everyone else                               */
 var CHECKOUT = { tr: "", intl: "" };
-var DOWNLOAD_URL = "https://github.com/servicescriptorium/belnovia-studio/releases/latest/download/BelnoviaStudio.exe";
+var DOWNLOAD_URL = "https://github.com/servicescriptorium/belnovia-studio/releases/latest/download/BelnoviaStudio-Kurulum.exe";
 /* -------------------------------------------------------------------------- */
 
 (function () {

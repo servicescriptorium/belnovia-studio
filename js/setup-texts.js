@@ -7,15 +7,16 @@ window.SETUP = {
   "sections": [
    {
     "id": "windows",
-    "h": "Programı ilk kez açmak",
-    "intro": "Yeni programlarda Windows bir uyarı gösterebilir. Dosyayı yalnızca bu siteden indir.",
+    "h": "Programı kurmak",
+    "intro": "Kurulum dosyasını yalnızca bu siteden indir. Yönetici izni gerekmez.",
     "steps": [
-     "**BelnoviaStudio.exe** dosyasına çift tıkla.",
-     "**Windows bilgisayarınızı korudu** penceresi çıkarsa **Ek bilgi**'ye tıkla.",
-     "**Yine de çalıştır**'a bas.",
+     "İndirdiğin **BelnoviaStudio-Kurulum.exe** dosyasına çift tıkla.",
+     "**Windows bilgisayarınızı korudu** penceresi çıkarsa **Ek bilgi**'ye tıkla, sonra **Yine de çalıştır**'a bas.",
+     "Kurulum penceresinde **Devam** → kullanım koşullarını kabul et → **Kur**'a bas.",
+     "**Belnovia Studio'yu şimdi aç** işaretliyken **Bitir**'e bas. Program bundan sonra Başlat menüsünde ve masaüstünde.",
      "Tarayıcı indirirken uyarı verirse **Koru** ya da **Yine de sakla**'yı seç."
     ],
-    "note": "Bu uyarı, programın henüz yeterince çok kişi tarafından indirilmemiş olmasından çıkar; programa zarar veren bir şey bulunduğu anlamına gelmez."
+    "note": "Bu uyarı, programın henüz yeterince çok kişi tarafından indirilmemiş olmasından çıkar; programa zarar veren bir şey bulunduğu anlamına gelmez. Güncellemeler bundan sonra program içinden kendiliğinden gelir; kurulumu bir daha çalıştırman gerekmez."
    },
    {
     "id": "claude",
@@ -91,15 +92,16 @@ window.SETUP = {
   "sections": [
    {
     "id": "windows",
-    "h": "Opening the app for the first time",
-    "intro": "Windows may show a warning for new programs. Only download the file from this site.",
+    "h": "Installing the program",
+    "intro": "Download the installer only from this site. No administrator rights are needed.",
     "steps": [
-     "Double-click **BelnoviaStudio.exe**.",
-     "If **Windows protected your PC** appears, click **More info**.",
-     "Click **Run anyway**.",
-     "If your browser warns while downloading, choose **Keep** / **Keep anyway**."
+     "Double-click the **BelnoviaStudio-Kurulum.exe** you downloaded.",
+     "If a **Windows protected your PC** window appears, click **More info**, then **Run anyway**.",
+     "In the setup window press **Continue** → accept the terms of use → **Install**.",
+     "With **Open Belnovia Studio now** ticked, press **Finish**. From now on the program is in the Start menu and on the desktop.",
+     "If your browser warns while downloading, choose **Keep** or **Keep anyway**."
     ],
-    "note": "The warning appears because not many people have downloaded the program yet; it does not mean anything harmful was found."
+    "note": "This warning appears because not many people have downloaded the program yet; it does not mean anything harmful was found. From now on updates arrive by themselves inside the program; you don't need to run the installer again."
    },
    {
     "id": "claude",
@@ -175,15 +177,16 @@ window.SETUP = {
   "sections": [
    {
     "id": "windows",
-    "h": "Die App zum ersten Mal öffnen",
-    "intro": "Bei neuen Programmen kann Windows eine Warnung zeigen. Lade die Datei nur von dieser Website herunter.",
+    "h": "Das Programm installieren",
+    "intro": "Lade das Installationsprogramm nur von dieser Seite. Administratorrechte sind nicht nötig.",
     "steps": [
-     "Doppelklick auf **BelnoviaStudio.exe**.",
-     "Erscheint **Der Computer wurde durch Windows geschützt**, klick auf **Weitere Informationen**.",
-     "Klick auf **Trotzdem ausführen**.",
-     "Warnt der Browser beim Herunterladen, wähle **Behalten** / **Trotzdem behalten**."
+     "Doppelklicke auf die heruntergeladene **BelnoviaStudio-Kurulum.exe**.",
+     "Erscheint **Der Computer wurde durch Windows geschützt**, klicke auf **Weitere Informationen** und dann auf **Trotzdem ausführen**.",
+     "Im Installationsfenster: **Weiter** → Nutzungsbedingungen akzeptieren → **Installieren**.",
+     "Mit Haken bei **Belnovia Studio jetzt öffnen** auf **Fertigstellen** klicken. Das Programm ist ab jetzt im Startmenü und auf dem Desktop.",
+     "Warnt der Browser beim Herunterladen, wähle **Beibehalten**."
     ],
-    "note": "Die Warnung erscheint, weil das Programm noch nicht von vielen Menschen heruntergeladen wurde; sie bedeutet nicht, dass etwas Schädliches gefunden wurde."
+    "note": "Die Warnung erscheint, weil das Programm noch nicht von vielen Menschen heruntergeladen wurde; sie bedeutet nicht, dass etwas Schädliches gefunden wurde. Updates kommen ab jetzt automatisch im Programm; das Installationsprogramm musst du nicht erneut ausführen."
    },
    {
     "id": "claude",
@@ -259,15 +262,16 @@ window.SETUP = {
   "sections": [
    {
     "id": "windows",
-    "h": "Abrir la app por primera vez",
-    "intro": "Windows puede mostrar un aviso con programas nuevos. Descarga el archivo solo desde este sitio.",
+    "h": "Instalar el programa",
+    "intro": "Descarga el instalador solo desde este sitio. No hacen falta permisos de administrador.",
     "steps": [
-     "Haz doble clic en **BelnoviaStudio.exe**.",
-     "Si aparece **Windows protegió su PC**, haz clic en **Más información**.",
-     "Haz clic en **Ejecutar de todas formas**.",
-     "Si el navegador avisa al descargar, elige **Conservar** / **Conservar de todas formas**."
+     "Haz doble clic en el **BelnoviaStudio-Kurulum.exe** que descargaste.",
+     "Si aparece **Windows protegió su PC**, haz clic en **Más información** y luego en **Ejecutar de todas formas**.",
+     "En la ventana de instalación pulsa **Continuar** → acepta las condiciones de uso → **Instalar**.",
+     "Con **Abrir Belnovia Studio ahora** marcado, pulsa **Finalizar**. A partir de ahora el programa está en el menú Inicio y en el escritorio.",
+     "Si el navegador avisa al descargar, elige **Conservar**."
     ],
-    "note": "El aviso aparece porque aún no muchas personas han descargado el programa; no significa que se haya encontrado algo dañino."
+    "note": "Este aviso aparece porque todavía pocas personas han descargado el programa; no significa que se haya encontrado algo dañino. A partir de ahora las actualizaciones llegan solas dentro del programa; no hace falta volver a ejecutar el instalador."
    },
    {
     "id": "claude",
@@ -343,15 +347,16 @@ window.SETUP = {
   "sections": [
    {
     "id": "windows",
-    "h": "Ouvrir l'app pour la première fois",
-    "intro": "Windows peut afficher un avertissement pour les nouveaux programmes. Télécharge le fichier uniquement depuis ce site.",
+    "h": "Installer le programme",
+    "intro": "Télécharge l'installateur uniquement depuis ce site. Aucun droit administrateur n'est nécessaire.",
     "steps": [
-     "Double-clique sur **BelnoviaStudio.exe**.",
-     "Si **Windows a protégé votre ordinateur** apparaît, clique sur **Informations complémentaires**.",
-     "Clique sur **Exécuter quand même**.",
-     "Si le navigateur avertit pendant le téléchargement, choisis **Conserver** / **Conserver quand même**."
+     "Double-clique sur le **BelnoviaStudio-Kurulum.exe** téléchargé.",
+     "Si la fenêtre **Windows a protégé votre ordinateur** apparaît, clique sur **Informations complémentaires**, puis sur **Exécuter quand même**.",
+     "Dans la fenêtre d'installation : **Continuer** → accepte les conditions d'utilisation → **Installer**.",
+     "Avec **Ouvrir Belnovia Studio maintenant** coché, clique sur **Terminer**. Le programme est désormais dans le menu Démarrer et sur le bureau.",
+     "Si le navigateur affiche un avertissement au téléchargement, choisis **Conserver**."
     ],
-    "note": "L'avertissement apparaît parce que peu de personnes ont encore téléchargé le programme ; il ne signifie pas que quelque chose de dangereux a été trouvé."
+    "note": "Cet avertissement apparaît parce que peu de personnes ont encore téléchargé le programme ; cela ne veut pas dire que quelque chose de dangereux a été trouvé. Désormais, les mises à jour arrivent toutes seules dans le programme ; inutile de relancer l'installateur."
    },
    {
     "id": "claude",
@@ -427,15 +432,16 @@ window.SETUP = {
   "sections": [
    {
     "id": "windows",
-    "h": "Abrir a app pela primeira vez",
-    "intro": "O Windows pode mostrar um aviso com programas novos. Descarrega o ficheiro apenas a partir deste site.",
+    "h": "Instalar o programa",
+    "intro": "Baixe o instalador somente deste site. Não precisa de permissão de administrador.",
     "steps": [
-     "Faz duplo clique em **BelnoviaStudio.exe**.",
-     "Se aparecer **O Windows protegeu o PC**, clica em **Mais informações**.",
-     "Clica em **Executar mesmo assim**.",
-     "Se o navegador avisar durante a transferência, escolhe **Manter** / **Manter mesmo assim**."
+     "Clique duas vezes no **BelnoviaStudio-Kurulum.exe** que você baixou.",
+     "Se aparecer **O Windows protegeu o computador**, clique em **Mais informações** e depois em **Executar assim mesmo**.",
+     "Na janela de instalação, clique em **Continuar** → aceite os termos de uso → **Instalar**.",
+     "Com **Abrir o Belnovia Studio agora** marcado, clique em **Concluir**. A partir de agora o programa fica no menu Iniciar e na área de trabalho.",
+     "Se o navegador avisar durante o download, escolha **Manter**."
     ],
-    "note": "O aviso aparece porque ainda poucas pessoas descarregaram o programa; não significa que foi encontrado algo perigoso."
+    "note": "Esse aviso aparece porque poucas pessoas baixaram o programa até agora; não significa que algo prejudicial foi encontrado. A partir de agora, as atualizações chegam sozinhas dentro do programa; você não precisa executar o instalador de novo."
    },
    {
     "id": "claude",

@@ -1,4 +1,4 @@
-/* Belnovia Studio website */
+/* Belnovia Studio Pro website */
 @font-face { font-family: "Jakarta"; src: url("../fonts/jakarta.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
 @font-face { font-family: "BrandDisplay"; src: url("../fonts/montserrat.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
 
@@ -336,3 +336,9 @@ p { margin: 0; }
   .btn, .faq summary::after { transition: none; }
 }
 .brand + .top-act { margin-left: auto; }
+
+/* v2.0 additions */
+.hero-kick { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 18px; padding: 7px 14px; border-radius: 999px; border: 1px solid rgba(231,180,87,.55); background: rgba(231,180,87,.1); color: #f6dc9a; font: 700 .78rem/1 var(--display); letter-spacing: .16em; }
+.hero-kick::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #39d98a; box-shadow: 0 0 10px #39d98a; }
+.plan-year { color: var(--mute); }
+.plan-trial .plan-note { font-size: .9rem; color: var(--mute); margin-top: 12px; }

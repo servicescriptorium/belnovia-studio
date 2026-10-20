@@ -4,15 +4,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Belnovia Studio | YouTube hikaye videolarını neredeyse kendiliğinden üretin</title>
-<meta name="description" content="Kanalı ve günü seç, başlığı onayla: Belnovia Studio hikâyeyi yazar, seslendirir, görselleri çizer, videoyu hazırlar ve YouTube'a planlı yükler. Windows için.">
+<title>Belnovia Studio Pro | Tek tıkla, senin tarzında, baştan sona video</title>
+<meta name="description" content="Belnovia Studio Pro kanalını ve beğendiğin videoları analiz eder, tarzını öğrenir ve aynı tarzda tek tıkla baştan sona video üretir: hikâye, ses, görseller, montaj ve YouTube'a yükleme. Windows için.">
 <meta name="theme-color" content="#090b13">
 <link rel="icon" type="image/png" sizes="32x32" href="img/icon-32.png?v=4">
 <link rel="apple-touch-icon" href="img/icon-256.png?v=4">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Belnovia Studio">
-<meta property="og:title" content="Belnovia Studio">
-<meta property="og:description" content="Long-form YouTube story videos, almost automatically. Pick a channel and a day, choose a title; the app writes, voices, illustrates, renders and uploads. For Windows.">
+<meta property="og:site_name" content="Belnovia Studio Pro">
+<meta property="og:title" content="Belnovia Studio Pro | One click, your style">
+<meta property="og:description" content="One click: a full video for your channel, in your style, start to finish. Belnovia analyzes your channel and the videos you love, then writes, voices, illustrates, edits and uploads in that same style. For Windows.">
 <meta property="og:image" content="img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -26,7 +26,7 @@
 
 <header class="top">
   <div class="wrap top-in">
-    <a class="brand" href="#top" aria-label="Belnovia Studio">
+    <a class="brand" href="#top" aria-label="Belnovia Studio Pro">
       <img src="img/emblem-sm.png" width="32" height="28" alt="">
       <span>Belnovia<b>Studio</b></span>
     </a>
@@ -53,7 +53,8 @@
   <section class="hero" id="top">
     <div class="wrap">
       <div class="hero-copy">
-        <h1 data-i18n="hero.title">Başlığı sen seç. Uzun hikâye videosunu Belnovia Studio hazırlasın.</h1>
+        <p class="hero-kick" data-i18n="hero.kick">YENİ · BELNOVIA STUDIO PRO 2.0</p>
+        <h1 data-i18n="hero.title">Başlığı sen seç. Uzun hikâye videosunu Belnovia Studio Pro hazırlasın.</h1>
         <p class="lead" data-i18n="hero.sub"></p>
         <div class="cta-row">
           <a class="btn btn-primary dl-link" href="#download" data-i18n="hero.cta">Ücretsiz dene, Windows için indir</a>
@@ -84,10 +85,26 @@
       <div class="window hero-shot">
         <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i></div>
         <picture>
-          <source media="(max-width: 760px)" srcset="img/shot-titles-m.webp" width="860" height="760">
-          <img src="img/shot-titles.webp" width="1440" height="1000" data-i18n-alt="hero.shotAlt" alt="">
+          <source media="(max-width: 760px)" srcset="img/shots/tr/home-m.webp" width="860" height="662" data-langsrc="img/shots/{l}/home-m.webp">
+          <img src="img/shots/tr/home.webp" width="1440" height="900" data-i18n-alt="hero.shotAlt" alt="" data-langsrc="img/shots/{l}/home.webp">
         </picture>
       </div>
+    </div>
+  </section>
+
+  <!-- SAMPLE VIDEO (hidden unless js/site-config.js names a video) -->
+  <section class="sec sample-sec" id="sample" aria-labelledby="sample-h" hidden>
+    <div class="wrap">
+      <h2 id="sample-h" data-i18n="sample.title"></h2>
+      <p class="sec-lead" data-i18n="sample.lead"></p>
+      <div class="sample" id="sample-box">
+        <button type="button" class="sample-play" id="sample-play">
+          <span class="sample-poster" id="sample-poster" aria-hidden="true"></span>
+          <span class="sample-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+          <span class="sample-label" data-i18n="sample.play"></span>
+        </button>
+      </div>
+      <p class="sample-note" id="sample-note" data-i18n="sample.yt"></p>
     </div>
   </section>
 
@@ -133,20 +150,21 @@
         <div class="fgroup">
           <h3 data-i18n="feat.g1"></h3>
           <dl class="flist">
+            <div><dt data-i18n="feat.style.t"></dt><dd data-i18n="feat.style.d"></dd></div>
             <div><dt data-i18n="feat.ai.t"></dt><dd data-i18n="feat.ai.d"></dd></div>
-            <div><dt data-i18n="feat.rules.t"></dt><dd data-i18n="feat.rules.d"></dd></div>
-            <div><dt data-i18n="feat.packs.t"></dt><dd data-i18n="feat.packs.d"></dd></div>
-            <div><dt data-i18n="feat.group.t"></dt><dd data-i18n="feat.group.d"></dd></div>
             <div><dt data-i18n="feat.example.t"></dt><dd data-i18n="feat.example.d"></dd></div>
-            <div><dt data-i18n="feat.meta.t"></dt><dd data-i18n="feat.meta.d"></dd></div>
+            <div><dt data-i18n="feat.group.t"></dt><dd data-i18n="feat.group.d"></dd></div>
+            <div><dt data-i18n="feat.packs.t"></dt><dd data-i18n="feat.packs.d"></dd></div>
+            <div><dt data-i18n="feat.rules.t"></dt><dd data-i18n="feat.rules.d"></dd></div>
           </dl>
         </div>
         <div class="fgroup">
           <h3 data-i18n="feat.g2"></h3>
           <dl class="flist">
-            <div><dt data-i18n="feat.cover.t"></dt><dd data-i18n="feat.cover.d"></dd></div>
             <div><dt data-i18n="feat.voice.t"></dt><dd data-i18n="feat.voice.d"></dd></div>
-            <div><dt data-i18n="feat.images.t"></dt><dd data-i18n="feat.images.d"></dd></div>
+            <div><dt data-i18n="feat.signature.t"></dt><dd data-i18n="feat.signature.d"></dd></div>
+            <div><dt data-i18n="feat.labs.t"></dt><dd data-i18n="feat.labs.d"></dd></div>
+            <div><dt data-i18n="feat.cover.t"></dt><dd data-i18n="feat.cover.d"></dd></div>
             <div><dt data-i18n="feat.render.t"></dt><dd data-i18n="feat.render.d"></dd></div>
           </dl>
         </div>
@@ -154,14 +172,16 @@
           <h3 data-i18n="feat.g3"></h3>
           <dl class="flist">
             <div><dt data-i18n="feat.upload.t"></dt><dd data-i18n="feat.upload.d"></dd></div>
+            <div><dt data-i18n="feat.social.t"></dt><dd data-i18n="feat.social.d"></dd></div>
+            <div><dt data-i18n="feat.storage.t"></dt><dd data-i18n="feat.storage.d"></dd></div>
             <div><dt data-i18n="feat.cal.t"></dt><dd data-i18n="feat.cal.d"></dd></div>
           </dl>
         </div>
         <div class="fgroup">
           <h3 data-i18n="feat.g4"></h3>
           <dl class="flist">
+            <div><dt data-i18n="feat.trends.t"></dt><dd data-i18n="feat.trends.d"></dd></div>
             <div><dt data-i18n="feat.cost.t"></dt><dd data-i18n="feat.cost.d"></dd></div>
-            <div><dt data-i18n="feat.backup.t"></dt><dd data-i18n="feat.backup.d"></dd></div>
             <div><dt data-i18n="feat.phone.t"></dt><dd data-i18n="feat.phone.d"></dd></div>
             <div><dt data-i18n="feat.support.t"></dt><dd data-i18n="feat.support.d"></dd></div>
             <div><dt data-i18n="feat.lang.t"></dt><dd data-i18n="feat.lang.d"></dd></div>
@@ -178,34 +198,18 @@
       <p class="sec-lead" data-i18n="shots.lead"></p>
       <div class="tabs" role="tablist" aria-labelledby="shots-h">
         <button role="tab" id="t-new" aria-controls="p-shot" aria-selected="true" data-shot="new" data-i18n="shots.new"></button>
-        <button role="tab" id="t-titles" aria-controls="p-shot" aria-selected="false" tabindex="-1" data-shot="titles" data-i18n="shots.titles"></button>
+        <button role="tab" id="t-trend" aria-controls="p-shot" aria-selected="false" tabindex="-1" data-shot="trend" data-i18n="shots.trend"></button>
+        <button role="tab" id="t-voice" aria-controls="p-shot" aria-selected="false" tabindex="-1" data-shot="voice" data-i18n="shots.voice"></button>
+        <button role="tab" id="t-labs" aria-controls="p-shot" aria-selected="false" tabindex="-1" data-shot="labs" data-i18n="shots.labs"></button>
         <button role="tab" id="t-cal" aria-controls="p-shot" aria-selected="false" tabindex="-1" data-shot="cal" data-i18n="shots.cal"></button>
-        <button role="tab" id="t-rules" aria-controls="p-shot" aria-selected="false" tabindex="-1" data-shot="rules" data-i18n="shots.rules"></button>
-        <button role="tab" id="t-cost" aria-controls="p-shot" aria-selected="false" tabindex="-1" data-shot="cost" data-i18n="shots.cost"></button>
       </div>
       <figure class="shot" id="p-shot" role="tabpanel" aria-labelledby="t-new" tabindex="0">
         <div class="window">
           <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i></div>
-          <img id="shot-img" src="img/shot-new.webp" width="1440" height="900" alt="" loading="lazy">
+          <img id="shot-img" src="img/shots/tr/new.webp" width="1440" height="900" alt="" loading="lazy">
         </div>
         <figcaption id="shot-cap"></figcaption>
       </figure>
-    </div>
-  </section>
-
-  <!-- SAMPLE VIDEO (hidden unless js/site-config.js names a video) -->
-  <section class="sec sample-sec" id="sample" aria-labelledby="sample-h" hidden>
-    <div class="wrap">
-      <h2 id="sample-h" data-i18n="sample.title"></h2>
-      <p class="sec-lead" data-i18n="sample.lead"></p>
-      <div class="sample" id="sample-box">
-        <button type="button" class="sample-play" id="sample-play">
-          <span class="sample-poster" id="sample-poster" aria-hidden="true"></span>
-          <span class="sample-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
-          <span class="sample-label" data-i18n="sample.play"></span>
-        </button>
-      </div>
-      <p class="sample-note" id="sample-note" data-i18n="sample.yt"></p>
     </div>
   </section>
 
@@ -215,30 +219,33 @@
       <h2 id="price-h" data-i18n="price.title"></h2>
       <p class="sec-lead" data-i18n="price.lead"></p>
       <div class="plans">
-        <article class="plan plan-trial" aria-labelledby="pl-trial">
-          <h3 id="pl-trial" data-i18n="price.trial"></h3>
-          <p class="plan-price"><span data-i18n="price.trialPrice"></span></p>
-          <p class="plan-sub" data-i18n="price.trialSub"></p>
-          <p class="plan-note" data-i18n="price.trialNote"></p>
+        <article class="plan" aria-labelledby="pl-free">
+          <h3 id="pl-free" data-i18n="price.free"></h3>
+          <p class="plan-price"><span data-i18n="price.freePrice"></span></p>
+          <p class="plan-sub" data-i18n="price.freeSub"></p>
+          <ul class="plan-inc">
+            <li data-i18n="price.f1"></li><li data-i18n="price.f2"></li><li data-i18n="price.f3"></li><li data-i18n="price.f4"></li>
+          </ul>
+          <a class="btn btn-ghost dl-link" href="#download" data-i18n="price.freeCta"></a>
+        </article>
+        <article class="plan" aria-labelledby="pl-creator">
+          <h3 id="pl-creator" data-i18n="price.creator"></h3>
+          <p class="plan-price" data-price="creatorMonthly"></p>
+          <p class="plan-sub"><span data-price="creatorYearly" class="plan-year"></span></p>
+          <ul class="plan-inc">
+            <li data-i18n="price.c1"></li><li data-i18n="price.c2"></li><li data-i18n="price.c3"></li><li data-i18n="price.c4"></li><li data-i18n="price.c5"></li>
+          </ul>
+          <a class="btn btn-ghost buy" href="#download" data-plan="creator" data-i18n="price.buy"></a>
+        </article>
+        <article class="plan plan-trial" aria-labelledby="pl-pro">
+          <h3 id="pl-pro"><span data-i18n="price.pro"></span> <span class="tag" data-i18n="price.best"></span></h3>
+          <p class="plan-price" data-price="proMonthly"></p>
+          <p class="plan-sub"><span data-price="proYearly" class="plan-year"></span> <span class="tag" data-price="yearlyNote" hidden></span></p>
+          <ul class="plan-inc">
+            <li data-i18n="price.p1"></li><li data-i18n="price.p2"></li><li data-i18n="price.p3"></li><li data-i18n="price.p4"></li><li data-i18n="price.p5"></li>
+          </ul>
           <a class="btn btn-primary dl-link" href="#download" data-i18n="price.trialCta"></a>
-        </article>
-        <article class="plan" aria-labelledby="pl-month">
-          <h3 id="pl-month" data-i18n="price.monthly"></h3>
-          <p class="plan-price" data-price="monthly"></p>
-          <p class="plan-sub" data-i18n="price.monthlySub"></p>
-          <ul class="plan-inc">
-            <li data-i18n="price.inc1"></li><li data-i18n="price.inc2"></li><li data-i18n="price.inc3"></li>
-          </ul>
-          <a class="btn btn-ghost buy" href="#download" data-plan="monthly" data-i18n="price.buy"></a>
-        </article>
-        <article class="plan" aria-labelledby="pl-year">
-          <h3 id="pl-year"><span data-i18n="price.yearly"></span> <span class="tag" data-price="yearlyNote" hidden></span></h3>
-          <p class="plan-price" data-price="yearly"></p>
-          <p class="plan-sub" data-i18n="price.yearlySub"></p>
-          <ul class="plan-inc">
-            <li data-i18n="price.inc1"></li><li data-i18n="price.inc2"></li><li data-i18n="price.inc3"></li>
-          </ul>
-          <a class="btn btn-ghost buy" href="#download" data-plan="yearly" data-i18n="price.buyYear"></a>
+          <p class="plan-note" data-i18n="price.trialNote"></p>
         </article>
       </div>
       <div class="price-notes">
@@ -254,7 +261,7 @@
         <dl class="costs-list">
           <div><dt data-i18n="costs.aiH"></dt><dd data-i18n="costs.aiP"></dd></div>
           <div><dt data-i18n="costs.imgH"></dt><dd data-i18n="costs.imgP"></dd></div>
-          <div><dt data-i18n="costs.voiceH"></dt><dd><span data-i18n="costs.voiceP"></span> <a href="https://lumean.net/en" rel="noopener" target="_blank">lumean.net</a></dd></div>
+          <div><dt data-i18n="costs.voiceH"></dt><dd data-i18n="costs.voiceP"></dd></div>
           <div><dt data-i18n="costs.ytH"></dt><dd data-i18n="costs.ytP"></dd></div>
         </dl>
         <a class="costs-more" href="kurulum.html" data-i18n="costs.more"></a>
@@ -270,7 +277,7 @@
         <div class="dl-body">
           <h2 id="dl-h" data-i18n="dl.title"></h2>
           <p data-i18n="dl.lead"></p>
-          <a class="btn btn-primary btn-lg" id="dl-btn" href="https://github.com/servicescriptorium/belnovia-studio/releases/latest/download/BelnoviaStudio-Kurulum.exe" data-i18n="dl.btn">Kurulum dosyasını indir</a>
+          <a class="btn btn-primary btn-lg" id="dl-btn" href="https://github.com/servicescriptorium/belnovia-studio-pro/releases/latest/download/BelnoviaStudioPro-Setup.exe" data-i18n="dl.btn">Kurulum dosyasını indir</a>
           <p class="dl-note" data-i18n="dl.note"></p>
           <p class="dl-note"><a href="kurulum.html" data-i18n="dl.setup"></a></p>
         </div>
@@ -329,7 +336,7 @@
   <div class="wrap foot-in">
     <div class="foot-brand">
       <img src="img/emblem-sm.png" width="28" height="25" alt="">
-      <span>© <span class="year">2026</span> Belnovia Studio. <span data-i18n="foot.rights"></span></span>
+      <span>© <span class="year">2026</span> Belnovia Studio Pro. <span data-i18n="foot.rights"></span></span>
     </div>
     <nav class="foot-nav" aria-label="Legal">
       <a href="terms.html" data-i18n="foot.terms"></a>

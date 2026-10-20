@@ -51,14 +51,19 @@ d. Çalışınca GitHub'da Settings > Pages > "Enforce HTTPS" kutusunu işaretle
 -------------------------------------------
 * FİYATLAR: prices.json dosyasını GitHub'da aç, kalem simgesine bas, değiştir,
   "Commit changes" ile kaydet. Site fiyatı her açılışta bu dosyadan okur.
-    "monthly"      aylık fiyat yazısı        örnek: "$20 / month"
-    "yearly"       yıllık fiyat yazısı       örnek: "$200 / year"
-    "yearlyNote"   yıllık plandaki küçük etiket (boş bırakırsan görünmez)
-    "trialDays"    deneme gün sayısı (sayı)
-    "trialVideos"  deneme video sayısı (sayı)
-    "currencyNote" fiyatların altına küçük not (ör. "Fiyatlara KDV dahildir")
+  Sitede 3 plan görünür: Belnovia Free (ücretsiz), Belnovia Creator ve Belnovia Studio Pro.
+    "creatorMonthly"  Creator aylık fiyat yazısı   örnek: "₺499 / ay"
+    "creatorYearly"   Creator yıllık fiyat yazısı  örnek: "₺4.990 / yıl"
+    "proMonthly"      Studio Pro aylık fiyat yazısı
+    "proYearly"       Studio Pro yıllık fiyat yazısı
+    "yearlyNote"      Studio Pro yıllık yanındaki küçük etiket (boş bırakırsan görünmez)
+    "trialDays"       deneme gün sayısı (sayı)
+    "trialVideos"     deneme video sayısı (sayı)
+    "currencyNote"    fiyatların altına küçük not
+  Bir fiyat boşsa (""), o planda "Programda gösterilir" yazar.
+  Fiyatları Sahip programında Yönetim → Planlar'da girdiklerinle aynı tut.
   İpucu: Her dilde farklı yazı göstermek istersen tırnak yerine şöyle yazabilirsin:
-    "monthly": {"tr":"Aylık 650 TL","en":"$20 / month"}
+    "proMonthly": {"tr":"Aylık 1.249 TL","en":"$39 / month"}
   (Bir dil yoksa İngilizcesi gösterilir.)
 
 * ÖDEME BAĞLANTILARI: js/site.js dosyasının en üstündeki satır:
@@ -82,9 +87,9 @@ d. Çalışınca GitHub'da Settings > Pages > "Enforce HTTPS" kutusunu işaretle
   (WhatsApp, X, Facebook paylaşımlarında görsel böyle daha güvenilir çıkar.)
 
 * İNDİRME LİNKİ: js/site.js içinde DOWNLOAD_URL. Şu an:
-  https://github.com/servicescriptorium/belnovia-studio/releases/latest/download/BelnoviaStudio.exe
-  Bu link, GitHub'daki "belnovia-studio" deposunda en son yayınladığın sürümdeki
-  BelnoviaStudio.exe dosyasını indirir. Dosya adı aynı kaldıkça değiştirmen gerekmez.
+  https://github.com/servicescriptorium/belnovia-studio-pro/releases/latest/download/BelnoviaStudioPro-Setup.exe
+  Bu link, GitHub'daki "belnovia-studio-pro" deposunda en son yayınladığın sürümdeki
+  BelnoviaStudioPro-Setup.exe dosyasını indirir. Dosya adı aynı kaldıkça değiştirmen gerekmez.
 
 
 4) DİLLER
@@ -97,7 +102,7 @@ Bir dili doğrudan açan link: https://ALANADIN/?lang=en
 
 ÖRNEK VİDEO (ana sayfa)
 -----------------------
-Ana sayfada "Belnovia Studio ile yapılmış örnek" bölümü, js/site-config.js dosyasındaki ayara göre
+Ana sayfada "Belnovia Studio Pro ile yapılmış örnek" bölümü, js/site-config.js dosyasındaki ayara göre
 görünür. Ayar boşsa bölüm hiç görünmez.
 
 a. Örnek videoyu YouTube'a yükle (liste dışı da olabilir).
@@ -117,6 +122,11 @@ SAMPLE_VIDEO_ID doluysa önce o kullanılır.
 
 KURULUM REHBERİ (kurulum.html)
 ------------------------------
-Müşterilerin Claude anahtarı, Lumean, Kokoro, G-Labs ve YouTube bağlantısını adım adım kurduğu
-sayfa. Metinler 6 dilde js/setup-texts.js dosyasındadır. Bölümlere doğrudan link verilebilir:
-kurulum.html#windows, #claude, #lumean, #kokoro, #glabs, #youtube
+Müşterilerin programı kurduğu, Belnovia AI, Belnovia Voice, Belnovia Labs ve YouTube bağlantısını
+adım adım ayarladığı sayfa. Metinler 6 dilde js/setup-texts.js dosyasındadır. Bölümlere doğrudan
+link verilebilir: kurulum.html#windows, #ai, #voice, #labs, #youtube
+
+TANITIM FİLMİ ve EKRAN GÖRÜNTÜLERİ
+----------------------------------
+Ana sayfadaki tanıtım filmi videos/demo-tr.mp4 (Türkçe) ve videos/demo-en.mp4 (diğer diller).
+Ekran görüntüleri img/shots/tr ve img/shots/en klasörlerinde.

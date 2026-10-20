@@ -1,4 +1,4 @@
-/* Belnovia Studio website: language, prices, screenshots, legal pages. No dependencies. */
+/* Belnovia Studio Pro website: language, prices, screenshots, legal pages. No dependencies. */
 
 /* ---- Owner settings -------------------------------------------------------
    Checkout links. Leave empty ("") to send buyers to the download section
@@ -7,7 +7,7 @@
           the licence is then tied to the buyer's account automatically)
    intl = Paddle checkout link for everyone else                               */
 var CHECKOUT = { tr: "", intl: "" };
-var DOWNLOAD_URL = "https://github.com/servicescriptorium/belnovia-studio/releases/latest/download/BelnoviaStudio-Kurulum.exe";
+var DOWNLOAD_URL = "https://github.com/servicescriptorium/belnovia-studio-pro/releases/latest/download/BelnoviaStudioPro-Setup.exe";
 /* -------------------------------------------------------------------------- */
 
 (function () {
@@ -17,7 +17,7 @@ var DOWNLOAD_URL = "https://github.com/servicescriptorium/belnovia-studio/releas
     ["es", "Español"], ["fr", "Français"], ["pt", "Português"]
   ];
   var DICT = window.I18N || {};
-  var PRICES = { monthly: "", yearly: "", yearlyNote: "", trialDays: 7, trialVideos: 3, currencyNote: "" };
+  var PRICES = { creatorMonthly: "", creatorYearly: "", proMonthly: "", proYearly: "", yearlyNote: "", trialDays: 7, trialVideos: 3, currencyNote: "" };
   var lang = "tr";
 
   function store(k, v) {
@@ -50,7 +50,7 @@ var DOWNLOAD_URL = "https://github.com/servicescriptorium/belnovia-studio/releas
     if (doc) {
       renderLegal(doc);
     } else if (page) {
-      document.title = t(page + ".title") + " | Belnovia Studio";
+      document.title = t(page + ".title") + " | Belnovia Studio Pro";
     } else {
       document.title = t("meta.title");
       var md = document.querySelector('meta[name="description"]');
@@ -69,7 +69,7 @@ var DOWNLOAD_URL = "https://github.com/servicescriptorium/belnovia-studio/releas
       var v = PRICES[k];
       // a value may also be {"tr":"...","en":"..."} to show different text per language
       if (v && typeof v === "object") v = v[lang] || v.en || v.tr || "";
-      if (k === "monthly" || k === "yearly") {
+      if (k === "creatorMonthly" || k === "proMonthly") {
         el.textContent = v || t("price.unknown");
         el.classList.toggle("is-unknown", !v);
       } else {
@@ -102,16 +102,19 @@ var DOWNLOAD_URL = "https://github.com/servicescriptorium/belnovia-studio/releas
   }
 
   /* ---------- screenshots ---------- */
-  var SHOTS = {
-    new: "img/shot-new.webp", titles: "img/shot-titles.webp", cal: "img/shot-calendar.webp",
-    rules: "img/shot-rules.webp", cost: "img/shot-costs.webp"
-  };
+  // screenshots come in Turkish and English; other languages see the English ones
+  var SHOT_IDS = ["new", "trend", "voice", "labs", "cal"];
+  function shotLang() { return lang === "tr" ? "tr" : "en"; }
+  function shotSrc(id) { return "img/shots/" + shotLang() + "/" + id + ".webp"; }
+  var SHOTS = {};
+  SHOT_IDS.forEach(function (k) { SHOTS[k] = k; });
   var currentShot = "new";
   function setShot(id) {
     var img = document.getElementById("shot-img");
     if (!img) return;
     currentShot = id;
-    if (img.getAttribute("src") !== SHOTS[id]) img.src = SHOTS[id];
+    if (img.getAttribute("src") !== shotSrc(id)) img.src = shotSrc(id);
+    document.querySelectorAll("[data-langsrc]").forEach(function (el) { var u = el.getAttribute("data-langsrc").replace("{l}", shotLang()); if (el.tagName === "SOURCE") { if (el.getAttribute("srcset") !== u) el.setAttribute("srcset", u); } else if (el.getAttribute("src") !== u) el.src = u; });
     img.alt = t("shots." + id + "Alt");
     document.getElementById("shot-cap").textContent = t("shots." + id + "Cap");
     var tabs = document.querySelectorAll('[role="tab"][data-shot]');
@@ -138,7 +141,7 @@ var DOWNLOAD_URL = "https://github.com/servicescriptorium/belnovia-studio/releas
     });
     // warm the cache for the other screenshots once the page is idle
     window.addEventListener("load", function () {
-      setTimeout(function () { Object.keys(SHOTS).forEach(function (k) { var i = new Image(); i.src = SHOTS[k]; }); }, 1500);
+      setTimeout(function () { SHOT_IDS.forEach(function (k) { var i = new Image(); i.src = shotSrc(k); }); }, 1500);
     });
   }
 
@@ -202,7 +205,7 @@ var DOWNLOAD_URL = "https://github.com/servicescriptorium/belnovia-studio/releas
     var L = window.LEGAL || {};
     var entry = (L[lang] && L[lang][doc]) || (L.tr && L.tr[doc]);
     if (!entry) return;
-    document.title = entry[0] + " | Belnovia Studio";
+    document.title = entry[0] + " | Belnovia Studio Pro";
     document.getElementById("legal-title").textContent = entry[0];
     var html = [];
     entry[1].split(/\n+/).forEach(function (line, idx) {

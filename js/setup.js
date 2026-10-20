@@ -14,7 +14,7 @@
     var lang = document.documentElement.lang;
     var L = all[lang] || all.en || all.tr;
     if (!L) return;
-    document.title = L.title + " | Belnovia Studio";
+    document.title = L.title + " | Belnovia Studio Pro";
     var h1 = document.getElementById("guide-title"); if (h1) h1.textContent = L.title;
     var lead = document.getElementById("guide-lead"); if (lead) lead.textContent = L.lead;
     var tocLabel = document.getElementById("guide-toc-label"); if (tocLabel) tocLabel.textContent = L.toc;

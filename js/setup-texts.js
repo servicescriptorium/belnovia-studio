@@ -2,7 +2,7 @@
 window.SETUP = {
  "tr": {
   "title": "Kurulum rehberi",
-  "lead": "Belnovia Studio'yu ilk kez kuruyorsan bu sırayla git; her bölüm birkaç dakika sürer. Anahtarlarını kimseyle paylaşma, yalnızca programdaki kutulara yapıştır.",
+  "lead": "Belnovia Studio Pro'yu ilk kez kuruyorsan bu sırayla git. Yazı, ses ve görsel için anahtar gerekmez; programın ilk açılışındaki kurulum adımları da seni aynı sırayla götürür.",
   "toc": "Bu sayfada",
   "sections": [
    {
@@ -10,62 +10,46 @@ window.SETUP = {
     "h": "Programı kurmak",
     "intro": "Kurulum dosyasını yalnızca bu siteden indir. Yönetici izni gerekmez.",
     "steps": [
-     "İndirdiğin **BelnoviaStudio-Kurulum.exe** dosyasına çift tıkla.",
+     "İndirdiğin **BelnoviaStudioPro-Setup.exe** dosyasına çift tıkla.",
      "**Windows bilgisayarınızı korudu** penceresi çıkarsa **Ek bilgi**'ye tıkla, sonra **Yine de çalıştır**'a bas.",
      "Kurulum penceresinde **Devam** → kullanım koşullarını kabul et → **Kur**'a bas.",
-     "**Belnovia Studio'yu şimdi aç** işaretliyken **Bitir**'e bas. Program bundan sonra Başlat menüsünde ve masaüstünde.",
+     "**Belnovia Studio Pro'yu şimdi aç** işaretliyken **Bitir**'e bas. Program bundan sonra Başlat menüsünde ve masaüstünde.",
      "Tarayıcı indirirken uyarı verirse **Koru** ya da **Yine de sakla**'yı seç."
     ],
     "note": "Bu uyarı, programın henüz yeterince çok kişi tarafından indirilmemiş olmasından çıkar; programa zarar veren bir şey bulunduğu anlamına gelmez. Güncellemeler bundan sonra program içinden kendiliğinden gelir; kurulumu bir daha çalıştırman gerekmez."
    },
    {
-    "id": "claude",
-    "h": "Claude API anahtarı (hikâye ve başlıklar)",
-    "intro": "Hikâyeyi, başlıkları ve açıklamaları yazan yapay zekâ için. Grok ya da ChatGPT kullanacaksan aynı adımları [console.x.ai](https://console.x.ai) ya da [platform.openai.com](https://platform.openai.com) üzerinde yaparsın.",
+    "h": "✦ Belnovia AI (hikâye ve başlıklar)",
+    "intro": "Hikâyeyi, başlıkları, açıklamaları ve görsel promptlarını programın kendi yapay zekâsı yazar. Ücretsizdir, anahtar gerekmez.",
     "steps": [
-     "[console.anthropic.com](https://console.anthropic.com) adresine git ve hesabınla giriş yap (yoksa ücretsiz aç).",
-     "Faturalandırma (**Billing**) bölümünden bakiye yükle; kullanım bu bakiyeden düşer.",
-     "Soldaki menüden **Access → API keys**'e gir.",
-     "**Create key**'e bas. \"Identity federation\" penceresi çıkarsa **Continue with an API key**'i seç.",
-     "Ad olarak örneğin **belnovia** yaz. **Expires** kısmında ana bilgisayarın için **Never** ya da uzun bir süre seç; süresi biten anahtar programı durdurur.",
-     "Oluşan **sk-ant-…** anahtarını **Copy** ile kopyala. Pencere kapanınca anahtar bir daha gösterilmez.",
-     "Belnovia Studio → **Ayarlar → Anahtarlar → Claude** kutusuna yapıştır ve **Kaydet ve dene**'ye bas. **Kayıtlı (şifreli)** yazısını görmelisin."
+     "Programı ilk açtığında Belnovia AI bilgisayarına kendiliğinden kurulur; köşede **✦ Belnovia hazırlanıyor… %** göstergesi görünür.",
+     "Beklemene gerek yok: kurulum sürerken işleri **✦ Belnovia AI Plus** yapar. Her ay ücretsiz Plus hakkın vardır.",
+     "İlk açılıştaki **Hikâyeyi kim yazacak?** adımında **✦ Belnovia AI**'nin seçili olduğunu gör ve **Devam**'a bas."
     ],
-    "note": "Anahtarını e-postayla, mesajla ya da ekran görüntüsüyle kimseye gönderme. Belnovia ekibi senden hiçbir zaman anahtar istemez."
+    "note": "Daha üstün performans istersen **Ayarlar → Yapay zekâ**'dan Claude, ChatGPT ya da Grok anahtarını ekleyebilirsin (isteğe bağlı, ücretli). Anahtarı [console.anthropic.com](https://console.anthropic.com), [platform.openai.com](https://platform.openai.com) ya da [console.x.ai](https://console.x.ai) üzerinden alırsın; programdaki **Resimli rehber** her adımı gösterir.",
+    "id": "ai"
    },
    {
-    "id": "lumean",
-    "h": "Lumean anahtarı (doğal seslendirme)",
-    "intro": "Videolarını gerçekçi seslerle seslendirmek için. Ücretli bir servistir; ücretsiz seçenek için Kokoro bölümüne bak.",
+    "h": "✦ Belnovia Voice (seslendirme)",
+    "intro": "Videoları seslendiren ses stüdyosu programın içindedir. Hazır profesyonel sesler bilgisayarında ücretsiz çalışır.",
     "steps": [
-     "[lumean.net](https://lumean.net/en) adresinden hesap aç ve planını seç.",
-     "Lumean hesabının API bölümünden bir API anahtarı oluştur ve kopyala.",
-     "Belnovia Studio → **Ayarlar → Anahtarlar → Lumean** kutusuna yapıştır ve **Kaydet ve dene**'ye bas.",
-     "**Kanallar → kanalın → Ses** sekmesinde Lumean'ı ve ses şablonunu seç, dinle ve kaydet."
-    ]
-   },
-   {
-    "id": "kokoro",
-    "h": "Kokoro (ücretsiz ses)",
-    "intro": "Kokoro hesap istemez; bir kere indirilir ve bilgisayarında çalışır. Amerikan ve İngiliz İngilizcesi sesleri vardır.",
-    "steps": [
-     "Belnovia Studio'da **Montaj** ekranını aç.",
-     "Kokoro kurulum düğmesine bas ve indirmenin bitmesini bekle. Bu bir kerelik, büyükçe bir indirmedir.",
-     "**Kanallar → kanalın → Ses** sekmesinde **Kokoro**'yu seç, sesleri dinleyip birini seç ve kaydet."
-    ]
-   },
-   {
-    "id": "glabs",
-    "h": "G-Labs (görseller)",
-    "intro": "Görseller, bilgisayarında çalışan G-Labs programı aracılığıyla senin Google Flow hesaplarınla çizilir. G-Labs'te en az bir Flow hesabı ekli değilse görsel üretilemez.",
-    "steps": [
-     "G-Labs programını kendi aboneliğinle kur ve aç.",
-     "**G-Labs → Ayarlar → Flow Hesapları** bölümünde en az bir Google hesabı ekle. **Aktif: 0 hesap** yazıyorsa görseller çizilemez.",
-     "G-Labs'te Webhook sunucusunu aç ve **Webhook anahtarını** kopyala.",
-     "Belnovia Studio → **Ayarlar → Görseller**'de **G-Labs (otomatik)**'u seç, Webhook anahtarını yapıştır ve kaydet.",
-     "Ayarlar'daki **Sistem kontrolü** ile bağlantının çalıştığını dene."
+     "Sol menüde **Ses Stüdyosu**'nu aç; ses motoru ilk açılışta kendiliğinden hazırlanır.",
+     "**Kanallar → kanalın → Ses** sekmesinde **BELNOVIA VOICE**'u seç, sesleri dinleyip birini seç ve kaydet.",
+     "Kendi sesini kullanmak için (Studio Pro): Ses Stüdyosu'nda **Signature** bölümünde kısa bir kayıt yap; **Belnovia Signature hazırlanıyor** bittiğinde sesin kanal ses listesinde görünür."
     ],
-    "note": "G-Labs çalışmazsa görselleri kendin de ekleyebilirsin: videonun Görseller sekmesindeki **Görselleri içe aktar** düğmesiyle."
+    "note": "İstersen Lumean ya da ElevenLabs anahtarını da ekleyebilirsin (ücretli, isteğe bağlı).",
+    "id": "voice"
+   },
+   {
+    "h": "✦ Belnovia Labs (görseller ve animasyon)",
+    "intro": "Sahneler, kapaklar ve animasyonlar kendi Google hesabınla çizilir. Ayrı program ya da anahtar gerekmez.",
+    "steps": [
+     "Sol menüde **Görsel Stüdyo**'yu aç.",
+     "**Google Hesapları** bölümünde **Hesap ekle**'ye bas ve Google hesabınla giriş yap.",
+     "İlk açılıştaki **Görselleri kim çizsin?** adımında **BELNOVIA LABS**'i seç ve **Deneme görseli çiz**'e bas; 30–90 saniyede bir görsel gelirse hazırsın."
+    ],
+    "note": "G-Labs kullanıyorsan aynı adımda **G-Labs programı**'nı seçip Webhook anahtarını yapıştırabilirsin.",
+    "id": "labs"
    },
    {
     "id": "youtube",
@@ -78,7 +62,7 @@ window.SETUP = {
      "**Branding** sayfasında **Application home page**, **privacy policy** ve **terms of service** kutularına kendi sitenin ya da kanalının adreslerini yaz, **Authorized domains**'e o alan adını ekle ve **Save**'e bas. Logo yükleme; logo eklenirse Google uzun bir inceleme ister.",
      "**Audience → Publish app → Confirm**. Durum **In production** olmalı. Bu adımı atlarsan bağlantı 7 günde bir kopar.",
      "**Clients → Create client → Desktop app → Create**. Çıkan **Client ID** ve **Client secret**'ı kopyala; secret pencere kapanınca bir daha görünmez (**Download JSON** ile yedekleyebilirsin).",
-     "Belnovia Studio → **Ayarlar → YouTube**'da Client ID ve Client Secret'ı yapıştır ve kaydet.",
+     "Belnovia Studio Pro → **Ayarlar → YouTube**'da Client ID ve Client Secret'ı yapıştır ve kaydet.",
      "**Kanallar → kanalın → Yayın** sekmesinde **Google ile bağla**'ya bas ve kanalın Google hesabını seç. \"Google bu uygulamayı doğrulamadı\" uyarısında **Gelişmiş → (uygulama adı) sayfasına git**'i seç; uygulama senin kendi uygulaman olduğu için güvenlidir. İzinleri onayla."
     ],
     "note": "Kendi siten yoksa ve Publish app düğmesi kapalı kalırsa bize yaz, birlikte çözelim: servicescriptorium@gmail.com"
@@ -87,7 +71,7 @@ window.SETUP = {
  },
  "en": {
   "title": "Setup guide",
-  "lead": "Setting up Belnovia Studio for the first time? Follow this order; each part takes a few minutes. Never share your keys with anyone — only paste them into the boxes in the app.",
+  "lead": "If you are installing Belnovia Studio Pro for the first time, follow this order. Writing, voice and images need no keys; the setup steps when the program first opens take you through the same order.",
   "toc": "On this page",
   "sections": [
    {
@@ -95,62 +79,46 @@ window.SETUP = {
     "h": "Installing the program",
     "intro": "Download the installer only from this site. No administrator rights are needed.",
     "steps": [
-     "Double-click the **BelnoviaStudio-Kurulum.exe** you downloaded.",
+     "Double-click the **BelnoviaStudioPro-Setup.exe** you downloaded.",
      "If a **Windows protected your PC** window appears, click **More info**, then **Run anyway**.",
      "In the setup window press **Continue** → accept the terms of use → **Install**.",
-     "With **Open Belnovia Studio now** ticked, press **Finish**. From now on the program is in the Start menu and on the desktop.",
+     "With **Open Belnovia Studio Pro now** ticked, press **Finish**. From now on the program is in the Start menu and on the desktop.",
      "If your browser warns while downloading, choose **Keep** or **Keep anyway**."
     ],
     "note": "This warning appears because not many people have downloaded the program yet; it does not mean anything harmful was found. From now on updates arrive by themselves inside the program; you don't need to run the installer again."
    },
    {
-    "id": "claude",
-    "h": "Claude API key (stories and titles)",
-    "intro": "For the AI that writes stories, titles and descriptions. Using Grok or ChatGPT instead? Do the same steps at [console.x.ai](https://console.x.ai) or [platform.openai.com](https://platform.openai.com).",
+    "h": "✦ Belnovia AI (stories and titles)",
+    "intro": "The program's own AI writes the story, titles, descriptions and image prompts. It is free and needs no key.",
     "steps": [
-     "Go to [console.anthropic.com](https://console.anthropic.com) and sign in (or create a free account).",
-     "Add credit under **Billing**; usage is taken from this balance.",
-     "In the left menu open **Access → API keys**.",
-     "Click **Create key**. If an \"identity federation\" window appears, choose **Continue with an API key**.",
-     "Name it, for example, **belnovia**. Under **Expires** pick **Never** or a long period for your main computer — an expired key stops the app.",
-     "Copy the new **sk-ant-…** key with **Copy**. Once the window closes, the key is never shown again.",
-     "In Belnovia Studio paste it into **Settings → Keys → Claude** and click **Save and test**. You should see **Saved (encrypted)**."
+     "When you first open the program, Belnovia AI installs itself on your computer; a **✦ Belnovia is getting ready… %** indicator shows in the corner.",
+     "No need to wait: while it installs, **✦ Belnovia AI Plus** does the work. You get a free Plus allowance every month.",
+     "In the first-run step **Who will write the story?**, check that **✦ Belnovia AI** is selected and press **Continue**."
     ],
-    "note": "Never send your key by e-mail, message or screenshot. The Belnovia team will never ask you for a key."
+    "note": "For even better performance you can add a Claude, ChatGPT or Grok key under **Settings → AI** (optional, paid). Get the key at [console.anthropic.com](https://console.anthropic.com), [platform.openai.com](https://platform.openai.com) or [console.x.ai](https://console.x.ai); the **Illustrated guide** in the program shows every step.",
+    "id": "ai"
    },
    {
-    "id": "lumean",
-    "h": "Lumean key (natural voices)",
-    "intro": "For narrating your videos with realistic voices. It is a paid service; for a free option see Kokoro.",
+    "h": "✦ Belnovia Voice (narration)",
+    "intro": "The voice studio that narrates your videos is built in. Ready-made professional voices run free on your computer.",
     "steps": [
-     "Create an account at [lumean.net](https://lumean.net/en) and choose a plan.",
-     "Create an API key in the API section of your Lumean account and copy it.",
-     "In Belnovia Studio paste it into **Settings → Keys → Lumean** and click **Save and test**.",
-     "In **Channels → your channel → Voice** choose Lumean and a voice template, listen and save."
-    ]
-   },
-   {
-    "id": "kokoro",
-    "h": "Kokoro (free voice)",
-    "intro": "Kokoro needs no account: it is downloaded once and runs on your computer. It has American and British English voices.",
-    "steps": [
-     "Open the **Montage** screen in Belnovia Studio.",
-     "Click the Kokoro install button and wait for the download to finish. It is a one-time, fairly large download.",
-     "In **Channels → your channel → Voice** choose **Kokoro**, listen to the voices, pick one and save."
-    ]
-   },
-   {
-    "id": "glabs",
-    "h": "G-Labs (images)",
-    "intro": "Images are drawn through the G-Labs program on your computer, using your own Google Flow accounts. If G-Labs has no Flow account added, no images can be made.",
-    "steps": [
-     "Install and open G-Labs with your own subscription.",
-     "In **G-Labs → Settings → Flow accounts** add at least one Google account. If it says **Active: 0 accounts**, images cannot be drawn.",
-     "Turn on the Webhook server in G-Labs and copy the **Webhook key**.",
-     "In Belnovia Studio open **Settings → Images**, choose **G-Labs (automatic)**, paste the Webhook key and save.",
-     "Use **System check** in Settings to test the connection."
+     "Open **Voice Studio** in the left menu; the voice engine gets ready on its own the first time.",
+     "In **Channels → your channel → Voice**, choose **BELNOVIA VOICE**, listen to the voices, pick one and save.",
+     "To use your own voice (Studio Pro): make a short recording in the **Signature** section of the Voice Studio; when **Belnovia Signature is getting ready** finishes, your voice appears in the channel's voice list."
     ],
-    "note": "If G-Labs doesn't work you can add images yourself with the **Import images** button on the video's Images tab."
+    "note": "You can also add a Lumean or ElevenLabs key (paid, optional).",
+    "id": "voice"
+   },
+   {
+    "h": "✦ Belnovia Labs (images and animation)",
+    "intro": "Scenes, thumbnails and animations are drawn with your own Google account. No extra app or key needed.",
+    "steps": [
+     "Open **Image Studio** in the left menu.",
+     "Under **Google accounts**, press **Add account** and sign in with your Google account.",
+     "In the first-run step **Who should draw the images?**, choose **BELNOVIA LABS** and press **Draw a test image**; if an image arrives in 30–90 seconds you are ready."
+    ],
+    "note": "If you use G-Labs, choose the **G-Labs app** in the same step and paste its Webhook key.",
+    "id": "labs"
    },
    {
     "id": "youtube",
@@ -163,7 +131,7 @@ window.SETUP = {
      "On the **Branding** page enter your own site's or channel's addresses for **Application home page**, **privacy policy** and **terms of service**, add that domain under **Authorized domains** and click **Save**. Don't upload a logo — with a logo Google asks for a long review.",
      "**Audience → Publish app → Confirm**. The status must be **In production**. Skip this and the connection drops every 7 days.",
      "**Clients → Create client → Desktop app → Create**. Copy the **Client ID** and **Client secret**; the secret is not shown again after the window closes (you can keep a copy with **Download JSON**).",
-     "In Belnovia Studio paste the Client ID and Client Secret into **Settings → YouTube** and save.",
+     "In Belnovia Studio Pro paste the Client ID and Client Secret into **Settings → YouTube** and save.",
      "In **Channels → your channel → Publishing** click **Connect with Google** and choose the channel's Google account. At \"Google hasn't verified this app\" choose **Advanced → Go to (app name)** — it is your own app, so it is safe. Accept the permissions."
     ],
     "note": "If you have no website and Publish app stays disabled, write to us and we'll sort it out together: servicescriptorium@gmail.com"
@@ -172,7 +140,7 @@ window.SETUP = {
  },
  "de": {
   "title": "Einrichtungsanleitung",
-  "lead": "Du richtest Belnovia Studio zum ersten Mal ein? Geh in dieser Reihenfolge vor; jeder Teil dauert ein paar Minuten. Gib deine Schlüssel niemals weiter – füge sie nur in die Felder der App ein.",
+  "lead": "Wenn du Belnovia Studio Pro zum ersten Mal installierst, geh in dieser Reihenfolge vor. Für Text, Stimme und Bilder brauchst du keine Schlüssel; die Einrichtungsschritte beim ersten Start des Programms führen dich in derselben Reihenfolge.",
   "toc": "Auf dieser Seite",
   "sections": [
    {
@@ -180,62 +148,46 @@ window.SETUP = {
     "h": "Das Programm installieren",
     "intro": "Lade das Installationsprogramm nur von dieser Seite. Administratorrechte sind nicht nötig.",
     "steps": [
-     "Doppelklicke auf die heruntergeladene **BelnoviaStudio-Kurulum.exe**.",
+     "Doppelklicke auf die heruntergeladene **BelnoviaStudioPro-Setup.exe**.",
      "Erscheint **Der Computer wurde durch Windows geschützt**, klicke auf **Weitere Informationen** und dann auf **Trotzdem ausführen**.",
      "Im Installationsfenster: **Weiter** → Nutzungsbedingungen akzeptieren → **Installieren**.",
-     "Mit Haken bei **Belnovia Studio jetzt öffnen** auf **Fertigstellen** klicken. Das Programm ist ab jetzt im Startmenü und auf dem Desktop.",
+     "Mit Haken bei **Belnovia Studio Pro jetzt öffnen** auf **Fertigstellen** klicken. Das Programm ist ab jetzt im Startmenü und auf dem Desktop.",
      "Warnt der Browser beim Herunterladen, wähle **Beibehalten**."
     ],
     "note": "Die Warnung erscheint, weil das Programm noch nicht von vielen Menschen heruntergeladen wurde; sie bedeutet nicht, dass etwas Schädliches gefunden wurde. Updates kommen ab jetzt automatisch im Programm; das Installationsprogramm musst du nicht erneut ausführen."
    },
    {
-    "id": "claude",
-    "h": "Claude-API-Schlüssel (Geschichten und Titel)",
-    "intro": "Für die KI, die Geschichten, Titel und Beschreibungen schreibt. Nutzt du Grok oder ChatGPT, mach dieselben Schritte bei [console.x.ai](https://console.x.ai) oder [platform.openai.com](https://platform.openai.com).",
+    "h": "✦ Belnovia AI (Geschichten und Titel)",
+    "intro": "Die programmeigene KI schreibt Geschichte, Titel, Beschreibungen und Bild-Prompts. Sie ist kostenlos und braucht keinen Schlüssel.",
     "steps": [
-     "Öffne [console.anthropic.com](https://console.anthropic.com) und melde dich an (oder erstelle kostenlos ein Konto).",
-     "Lade unter **Billing** Guthaben auf; die Nutzung wird davon abgezogen.",
-     "Öffne im linken Menü **Access → API keys**.",
-     "Klick auf **Create key**. Erscheint ein Fenster zu „Identity federation“, wähle **Continue with an API key**.",
-     "Gib einen Namen ein, z. B. **belnovia**. Wähle bei **Expires** für deinen Hauptcomputer **Never** oder einen langen Zeitraum – ein abgelaufener Schlüssel stoppt die App.",
-     "Kopiere den neuen Schlüssel **sk-ant-…** mit **Copy**. Nach dem Schließen wird er nie wieder angezeigt.",
-     "Füge ihn in Belnovia Studio unter **Einstellungen → Schlüssel → Claude** ein und klick auf **Speichern und testen**. Es sollte **Gespeichert (verschlüsselt)** erscheinen."
+     "Beim ersten Start installiert sich Belnovia AI von selbst auf deinem Computer; in der Ecke erscheint die Anzeige **✦ Belnovia wird vorbereitet… %**.",
+     "Du musst nicht warten: Während der Installation übernimmt **✦ Belnovia AI Plus** die Arbeit. Jeden Monat bekommst du ein kostenloses Plus-Kontingent.",
+     "Prüfe im Startschritt **Wer schreibt die Geschichte?**, dass **✦ Belnovia AI** ausgewählt ist, und drück auf **Weiter**."
     ],
-    "note": "Schick deinen Schlüssel nie per E-Mail, Nachricht oder Screenshot. Das Belnovia-Team fragt dich nie nach einem Schlüssel."
+    "note": "Für noch bessere Leistung kannst du unter **Einstellungen → KI** einen Schlüssel für Claude, ChatGPT oder Grok hinzufügen (optional, kostenpflichtig). Den Schlüssel bekommst du bei [console.anthropic.com](https://console.anthropic.com), [platform.openai.com](https://platform.openai.com) oder [console.x.ai](https://console.x.ai); die **Bebilderte Anleitung** im Programm zeigt jeden Schritt.",
+    "id": "ai"
    },
    {
-    "id": "lumean",
-    "h": "Lumean-Schlüssel (natürliche Stimmen)",
-    "intro": "Um deine Videos mit realistischen Stimmen zu vertonen. Der Dienst ist kostenpflichtig; eine kostenlose Option ist Kokoro.",
+    "h": "✦ Belnovia Voice (Vertonung)",
+    "intro": "Das Sprachstudio, das deine Videos vertont, ist eingebaut. Fertige professionelle Stimmen laufen kostenlos auf deinem Computer.",
     "steps": [
-     "Erstelle ein Konto auf [lumean.net](https://lumean.net/en) und wähle einen Tarif.",
-     "Erstelle im API-Bereich deines Lumean-Kontos einen API-Schlüssel und kopiere ihn.",
-     "Füge ihn in Belnovia Studio unter **Einstellungen → Schlüssel → Lumean** ein und klick auf **Speichern und testen**.",
-     "Wähle unter **Kanäle → dein Kanal → Ton** Lumean und eine Stimmvorlage, hör sie dir an und speichere."
-    ]
-   },
-   {
-    "id": "kokoro",
-    "h": "Kokoro (kostenlose Stimme)",
-    "intro": "Kokoro braucht kein Konto: Es wird einmal heruntergeladen und läuft auf deinem Computer. Es gibt amerikanische und britische englische Stimmen.",
-    "steps": [
-     "Öffne in Belnovia Studio den Bildschirm **Montage**.",
-     "Klick auf die Kokoro-Installationsschaltfläche und warte, bis der Download fertig ist. Es ist ein einmaliger, recht großer Download.",
-     "Wähle unter **Kanäle → dein Kanal → Ton** **Kokoro**, hör dir die Stimmen an, wähle eine aus und speichere."
-    ]
-   },
-   {
-    "id": "glabs",
-    "h": "G-Labs (Bilder)",
-    "intro": "Die Bilder werden über das G-Labs-Programm auf deinem Computer mit deinen eigenen Google-Flow-Konten erstellt. Ist in G-Labs kein Flow-Konto hinzugefügt, können keine Bilder entstehen.",
-    "steps": [
-     "Installiere und öffne G-Labs mit deinem eigenen Abo.",
-     "Füge unter **G-Labs → Einstellungen → Flow-Konten** mindestens ein Google-Konto hinzu. Steht dort **Aktiv: 0 Konten**, können keine Bilder erstellt werden.",
-     "Schalte in G-Labs den Webhook-Server ein und kopiere den **Webhook-Schlüssel**.",
-     "Öffne in Belnovia Studio **Einstellungen → Bilder**, wähle **G-Labs (automatisch)**, füge den Webhook-Schlüssel ein und speichere.",
-     "Teste die Verbindung mit dem **Systemcheck** in den Einstellungen."
+     "Öffne **Sprachstudio** im linken Menü; die Sprach-Engine richtet sich beim ersten Mal von selbst ein.",
+     "Wähle unter **Kanäle → dein Kanal → Ton** die Option **BELNOVIA VOICE**, hör dir die Stimmen an, wähl eine aus und speichere.",
+     "Für deine eigene Stimme (Studio Pro): Mach im Bereich **Signature** des Sprachstudios eine kurze Aufnahme; sobald **Belnovia Signature wird vorbereitet** fertig ist, erscheint deine Stimme in der Stimmenliste des Kanals."
     ],
-    "note": "Funktioniert G-Labs nicht, kannst du Bilder auch selbst hinzufügen – mit der Schaltfläche **Bilder importieren** im Bilder-Tab des Videos."
+    "note": "Du kannst auch einen Schlüssel für Lumean oder ElevenLabs hinzufügen (kostenpflichtig, optional).",
+    "id": "voice"
+   },
+   {
+    "h": "✦ Belnovia Labs (Bilder und Animation)",
+    "intro": "Szenen, Thumbnails und Animationen werden mit deinem eigenen Google-Konto gezeichnet. Keine Zusatz-App, kein Schlüssel nötig.",
+    "steps": [
+     "Öffne **Bildstudio** im linken Menü.",
+     "Drück unter **Google-Konten** auf **Konto hinzufügen** und melde dich mit deinem Google-Konto an.",
+     "Wähle im Startschritt **Wer soll die Bilder zeichnen?** die Option **BELNOVIA LABS** und drück auf **Testbild zeichnen**; kommt nach 30–90 Sekunden ein Bild, bist du startklar."
+    ],
+    "note": "Wenn du G-Labs nutzt, wähl im selben Schritt **G-Labs-Programm** und füge seinen Webhook-Schlüssel ein.",
+    "id": "labs"
    },
    {
     "id": "youtube",
@@ -248,7 +200,7 @@ window.SETUP = {
      "Trag auf der Seite **Branding** bei **Application home page**, **privacy policy** und **terms of service** die Adressen deiner Website oder deines Kanals ein, füge die Domain unter **Authorized domains** hinzu und klick auf **Save**. Lade kein Logo hoch – mit Logo verlangt Google eine lange Prüfung.",
      "**Audience → Publish app → Confirm**. Der Status muss **In production** sein. Ohne diesen Schritt bricht die Verbindung alle 7 Tage ab.",
      "**Clients → Create client → Desktop app → Create**. Kopiere **Client ID** und **Client secret**; das Secret wird nach dem Schließen nicht mehr angezeigt (mit **Download JSON** kannst du eine Kopie behalten).",
-     "Füge Client ID und Client Secret in Belnovia Studio unter **Einstellungen → YouTube** ein und speichere.",
+     "Füge Client ID und Client Secret in Belnovia Studio Pro unter **Einstellungen → YouTube** ein und speichere.",
      "Klick unter **Kanäle → dein Kanal → Veröffentlichung** auf **Mit Google verbinden** und wähle das Google-Konto des Kanals. Bei „Google hat diese App nicht überprüft“ wähle **Erweitert → Weiter zu (App-Name)** – es ist deine eigene App und daher sicher. Bestätige die Berechtigungen."
     ],
     "note": "Hast du keine Website und bleibt Publish app deaktiviert, schreib uns – wir lösen es gemeinsam: servicescriptorium@gmail.com"
@@ -257,7 +209,7 @@ window.SETUP = {
  },
  "es": {
   "title": "Guía de configuración",
-  "lead": "¿Configuras Belnovia Studio por primera vez? Sigue este orden; cada parte lleva unos minutos. No compartas nunca tus claves: pégalas solo en las casillas de la app.",
+  "lead": "Si instalas Belnovia Studio Pro por primera vez, sigue este orden. Para texto, voz e imágenes no hacen falta claves; los pasos de configuración al abrir el programa por primera vez te llevan por el mismo orden.",
   "toc": "En esta página",
   "sections": [
    {
@@ -265,62 +217,46 @@ window.SETUP = {
     "h": "Instalar el programa",
     "intro": "Descarga el instalador solo desde este sitio. No hacen falta permisos de administrador.",
     "steps": [
-     "Haz doble clic en el **BelnoviaStudio-Kurulum.exe** que descargaste.",
+     "Haz doble clic en el **BelnoviaStudioPro-Setup.exe** que descargaste.",
      "Si aparece **Windows protegió su PC**, haz clic en **Más información** y luego en **Ejecutar de todas formas**.",
      "En la ventana de instalación pulsa **Continuar** → acepta las condiciones de uso → **Instalar**.",
-     "Con **Abrir Belnovia Studio ahora** marcado, pulsa **Finalizar**. A partir de ahora el programa está en el menú Inicio y en el escritorio.",
+     "Con **Abrir Belnovia Studio Pro ahora** marcado, pulsa **Finalizar**. A partir de ahora el programa está en el menú Inicio y en el escritorio.",
      "Si el navegador avisa al descargar, elige **Conservar**."
     ],
     "note": "Este aviso aparece porque todavía pocas personas han descargado el programa; no significa que se haya encontrado algo dañino. A partir de ahora las actualizaciones llegan solas dentro del programa; no hace falta volver a ejecutar el instalador."
    },
    {
-    "id": "claude",
-    "h": "Clave de API de Claude (historias y títulos)",
-    "intro": "Para la IA que escribe historias, títulos y descripciones. Si usas Grok o ChatGPT, haz los mismos pasos en [console.x.ai](https://console.x.ai) o [platform.openai.com](https://platform.openai.com).",
+    "h": "✦ Belnovia AI (historias y títulos)",
+    "intro": "La IA propia del programa escribe la historia, los títulos, las descripciones y los prompts de imagen. Es gratis y no necesita clave.",
     "steps": [
-     "Entra en [console.anthropic.com](https://console.anthropic.com) e inicia sesión (o crea una cuenta gratis).",
-     "Añade saldo en **Billing**; el uso se descuenta de ese saldo.",
-     "En el menú de la izquierda abre **Access → API keys**.",
-     "Pulsa **Create key**. Si aparece una ventana de \"identity federation\", elige **Continue with an API key**.",
-     "Ponle un nombre, por ejemplo **belnovia**. En **Expires** elige **Never** o un periodo largo para tu ordenador principal: una clave caducada detiene la app.",
-     "Copia la nueva clave **sk-ant-…** con **Copy**. Al cerrar la ventana no se vuelve a mostrar.",
-     "En Belnovia Studio pégala en **Ajustes → Claves → Claude** y pulsa **Guardar y probar**. Deberías ver **Guardada (cifrada)**."
+     "Al abrir el programa por primera vez, Belnovia AI se instala sola en tu ordenador; en la esquina aparece el indicador **✦ Preparando Belnovia… %**.",
+     "No hace falta esperar: mientras se instala, **✦ Belnovia AI Plus** hace el trabajo. Cada mes recibes un saldo Plus gratuito.",
+     "En el paso inicial **¿Quién escribirá la historia?**, comprueba que **✦ Belnovia AI** está seleccionado y pulsa **Continuar**."
     ],
-    "note": "No envíes nunca tu clave por e-mail, mensaje ni captura de pantalla. El equipo de Belnovia nunca te pedirá una clave."
+    "note": "Para un rendimiento aún mejor, puedes añadir una clave de Claude, ChatGPT o Grok en **Ajustes → IA** (opcional, de pago). Consigue la clave en [console.anthropic.com](https://console.anthropic.com), [platform.openai.com](https://platform.openai.com) o [console.x.ai](https://console.x.ai); la **Guía ilustrada** del programa muestra cada paso.",
+    "id": "ai"
    },
    {
-    "id": "lumean",
-    "h": "Clave de Lumean (voces naturales)",
-    "intro": "Para narrar tus vídeos con voces realistas. Es un servicio de pago; la opción gratuita es Kokoro.",
+    "h": "✦ Belnovia Voice (narración)",
+    "intro": "El estudio de voz que narra tus vídeos viene integrado. Las voces profesionales listas funcionan gratis en tu ordenador.",
     "steps": [
-     "Crea una cuenta en [lumean.net](https://lumean.net/en) y elige un plan.",
-     "Crea una clave de API en la sección API de tu cuenta de Lumean y cópiala.",
-     "En Belnovia Studio pégala en **Ajustes → Claves → Lumean** y pulsa **Guardar y probar**.",
-     "En **Canales → tu canal → Voz** elige Lumean y una plantilla de voz, escúchala y guarda."
-    ]
-   },
-   {
-    "id": "kokoro",
-    "h": "Kokoro (voz gratuita)",
-    "intro": "Kokoro no necesita cuenta: se descarga una vez y funciona en tu ordenador. Tiene voces en inglés estadounidense y británico.",
-    "steps": [
-     "Abre la pantalla **Montaje** en Belnovia Studio.",
-     "Pulsa el botón de instalación de Kokoro y espera a que termine la descarga. Es una descarga única y bastante grande.",
-     "En **Canales → tu canal → Voz** elige **Kokoro**, escucha las voces, elige una y guarda."
-    ]
-   },
-   {
-    "id": "glabs",
-    "h": "G-Labs (imágenes)",
-    "intro": "Las imágenes se crean con el programa G-Labs de tu ordenador, usando tus propias cuentas de Google Flow. Si G-Labs no tiene ninguna cuenta de Flow añadida, no se pueden crear imágenes.",
-    "steps": [
-     "Instala y abre G-Labs con tu propia suscripción.",
-     "En **G-Labs → Ajustes → Cuentas de Flow** añade al menos una cuenta de Google. Si pone **Activas: 0 cuentas**, no se pueden crear imágenes.",
-     "Activa el servidor Webhook en G-Labs y copia la **clave del Webhook**.",
-     "En Belnovia Studio abre **Ajustes → Imágenes**, elige **G-Labs (automático)**, pega la clave del Webhook y guarda.",
-     "Prueba la conexión con **Comprobación del sistema** en Ajustes."
+     "Abre **Estudio de voz** en el menú de la izquierda; el motor de voz se prepara solo la primera vez.",
+     "En **Canales → tu canal → Voz**, elige **BELNOVIA VOICE**, escucha las voces, elige una y guarda.",
+     "Para usar tu propia voz (Studio Pro): haz una grabación corta en la sección **Signature** del Estudio de voz; cuando termine **Preparando Belnovia Signature**, tu voz aparece en la lista de voces del canal."
     ],
-    "note": "Si G-Labs no funciona, puedes añadir tú las imágenes con el botón **Importar imágenes** de la pestaña Imágenes del vídeo."
+    "note": "También puedes añadir una clave de Lumean o ElevenLabs (de pago, opcional).",
+    "id": "voice"
+   },
+   {
+    "h": "✦ Belnovia Labs (imágenes y animación)",
+    "intro": "Escenas, miniaturas y animaciones se dibujan con tu propia cuenta de Google. Sin apps extra ni claves.",
+    "steps": [
+     "Abre **Estudio de imagen** en el menú de la izquierda.",
+     "En **Cuentas de Google**, pulsa **Añadir cuenta** e inicia sesión con tu cuenta de Google.",
+     "En el paso inicial **¿Quién debe dibujar las imágenes?**, elige **BELNOVIA LABS** y pulsa **Dibujar imagen de prueba**; si llega una imagen en 30–90 segundos, ya está listo."
+    ],
+    "note": "Si usas G-Labs, elige **Programa G-Labs** en el mismo paso y pega su clave de Webhook.",
+    "id": "labs"
    },
    {
     "id": "youtube",
@@ -333,7 +269,7 @@ window.SETUP = {
      "En la página **Branding** escribe las direcciones de tu web o canal en **Application home page**, **privacy policy** y **terms of service**, añade ese dominio en **Authorized domains** y pulsa **Save**. No subas un logo: con logo Google pide una revisión larga.",
      "**Audience → Publish app → Confirm**. El estado debe ser **In production**. Sin este paso la conexión se corta cada 7 días.",
      "**Clients → Create client → Desktop app → Create**. Copia el **Client ID** y el **Client secret**; el secreto no vuelve a mostrarse al cerrar la ventana (puedes guardar una copia con **Download JSON**).",
-     "En Belnovia Studio pega el Client ID y el Client Secret en **Ajustes → YouTube** y guarda.",
+     "En Belnovia Studio Pro pega el Client ID y el Client Secret en **Ajustes → YouTube** y guarda.",
      "En **Canales → tu canal → Publicación** pulsa **Conectar con Google** y elige la cuenta de Google del canal. En \"Google no ha verificado esta aplicación\" elige **Avanzado → Ir a (nombre de la app)**: es tu propia app, así que es seguro. Acepta los permisos."
     ],
     "note": "Si no tienes web y Publish app sigue desactivado, escríbenos y lo resolvemos juntos: servicescriptorium@gmail.com"
@@ -342,7 +278,7 @@ window.SETUP = {
  },
  "fr": {
   "title": "Guide d'installation",
-  "lead": "Tu installes Belnovia Studio pour la première fois ? Suis cet ordre ; chaque partie prend quelques minutes. Ne partage jamais tes clés : colle-les seulement dans les champs de l'app.",
+  "lead": "Si tu installes Belnovia Studio Pro pour la première fois, suis cet ordre. Le texte, la voix et les images ne demandent aucune clé ; les étapes de configuration au premier lancement du programme te guident dans le même ordre.",
   "toc": "Sur cette page",
   "sections": [
    {
@@ -350,62 +286,46 @@ window.SETUP = {
     "h": "Installer le programme",
     "intro": "Télécharge l'installateur uniquement depuis ce site. Aucun droit administrateur n'est nécessaire.",
     "steps": [
-     "Double-clique sur le **BelnoviaStudio-Kurulum.exe** téléchargé.",
+     "Double-clique sur le **BelnoviaStudioPro-Setup.exe** téléchargé.",
      "Si la fenêtre **Windows a protégé votre ordinateur** apparaît, clique sur **Informations complémentaires**, puis sur **Exécuter quand même**.",
      "Dans la fenêtre d'installation : **Continuer** → accepte les conditions d'utilisation → **Installer**.",
-     "Avec **Ouvrir Belnovia Studio maintenant** coché, clique sur **Terminer**. Le programme est désormais dans le menu Démarrer et sur le bureau.",
+     "Avec **Ouvrir Belnovia Studio Pro maintenant** coché, clique sur **Terminer**. Le programme est désormais dans le menu Démarrer et sur le bureau.",
      "Si le navigateur affiche un avertissement au téléchargement, choisis **Conserver**."
     ],
     "note": "Cet avertissement apparaît parce que peu de personnes ont encore téléchargé le programme ; cela ne veut pas dire que quelque chose de dangereux a été trouvé. Désormais, les mises à jour arrivent toutes seules dans le programme ; inutile de relancer l'installateur."
    },
    {
-    "id": "claude",
-    "h": "Clé API Claude (histoires et titres)",
-    "intro": "Pour l'IA qui écrit les histoires, les titres et les descriptions. Tu utilises Grok ou ChatGPT ? Fais les mêmes étapes sur [console.x.ai](https://console.x.ai) ou [platform.openai.com](https://platform.openai.com).",
+    "h": "✦ Belnovia AI (histoires et titres)",
+    "intro": "L'IA du programme écrit l'histoire, les titres, les descriptions et les prompts d'images. Elle est gratuite et ne demande aucune clé.",
     "steps": [
-     "Va sur [console.anthropic.com](https://console.anthropic.com) et connecte-toi (ou crée un compte gratuit).",
-     "Ajoute du crédit dans **Billing** ; l'utilisation est prélevée sur ce solde.",
-     "Dans le menu de gauche, ouvre **Access → API keys**.",
-     "Clique sur **Create key**. Si une fenêtre « identity federation » apparaît, choisis **Continue with an API key**.",
-     "Donne-lui un nom, par exemple **belnovia**. Dans **Expires**, choisis **Never** ou une longue durée pour ton ordinateur principal : une clé expirée arrête l'app.",
-     "Copie la nouvelle clé **sk-ant-…** avec **Copy**. Une fois la fenêtre fermée, elle n'est plus jamais affichée.",
-     "Dans Belnovia Studio, colle-la dans **Paramètres → Clés → Claude** et clique sur **Enregistrer et tester**. Tu dois voir **Enregistrée (chiffrée)**."
+     "Au premier lancement du programme, Belnovia AI s'installe toute seule sur ton ordinateur ; l'indicateur **✦ Préparation de Belnovia… %** s'affiche dans le coin.",
+     "Pas besoin d'attendre : pendant l'installation, **✦ Belnovia AI Plus** fait le travail. Tu reçois un crédit Plus gratuit chaque mois.",
+     "À l'étape de démarrage **Qui va écrire l'histoire ?**, vérifie que **✦ Belnovia AI** est sélectionné et appuie sur **Continuer**."
     ],
-    "note": "N'envoie jamais ta clé par e-mail, message ou capture d'écran. L'équipe Belnovia ne te demandera jamais de clé."
+    "note": "Pour des performances encore meilleures, tu peux ajouter une clé Claude, ChatGPT ou Grok dans **Paramètres → IA** (optionnel, payant). Obtiens la clé sur [console.anthropic.com](https://console.anthropic.com), [platform.openai.com](https://platform.openai.com) ou [console.x.ai](https://console.x.ai) ; le **Guide illustré** du programme montre chaque étape.",
+    "id": "ai"
    },
    {
-    "id": "lumean",
-    "h": "Clé Lumean (voix naturelles)",
-    "intro": "Pour narrer tes vidéos avec des voix réalistes. C'est un service payant ; l'option gratuite est Kokoro.",
+    "h": "✦ Belnovia Voice (narration)",
+    "intro": "Le studio vocal qui fait la narration de tes vidéos est intégré. Les voix professionnelles prêtes à l'emploi tournent gratuitement sur ton ordinateur.",
     "steps": [
-     "Crée un compte sur [lumean.net](https://lumean.net/en) et choisis une offre.",
-     "Crée une clé API dans la section API de ton compte Lumean et copie-la.",
-     "Dans Belnovia Studio, colle-la dans **Paramètres → Clés → Lumean** et clique sur **Enregistrer et tester**.",
-     "Dans **Chaînes → ta chaîne → Voix**, choisis Lumean et un modèle de voix, écoute et enregistre."
-    ]
-   },
-   {
-    "id": "kokoro",
-    "h": "Kokoro (voix gratuite)",
-    "intro": "Kokoro ne demande aucun compte : il se télécharge une fois et fonctionne sur ton ordinateur. Il propose des voix en anglais américain et britannique.",
-    "steps": [
-     "Ouvre l'écran **Montage** dans Belnovia Studio.",
-     "Clique sur le bouton d'installation de Kokoro et attends la fin du téléchargement. C'est un téléchargement unique et assez volumineux.",
-     "Dans **Chaînes → ta chaîne → Voix**, choisis **Kokoro**, écoute les voix, choisis-en une et enregistre."
-    ]
-   },
-   {
-    "id": "glabs",
-    "h": "G-Labs (images)",
-    "intro": "Les images sont créées par le programme G-Labs sur ton ordinateur, avec tes propres comptes Google Flow. Si aucun compte Flow n'est ajouté dans G-Labs, aucune image ne peut être créée.",
-    "steps": [
-     "Installe et ouvre G-Labs avec ton propre abonnement.",
-     "Dans **G-Labs → Paramètres → Comptes Flow**, ajoute au moins un compte Google. S'il est écrit **Actifs : 0 compte**, les images ne peuvent pas être créées.",
-     "Active le serveur Webhook dans G-Labs et copie la **clé Webhook**.",
-     "Dans Belnovia Studio, ouvre **Paramètres → Images**, choisis **G-Labs (automatique)**, colle la clé Webhook et enregistre.",
-     "Teste la connexion avec **Vérification du système** dans les Paramètres."
+     "Ouvre **Studio vocal** dans le menu de gauche ; le moteur vocal se prépare tout seul la première fois.",
+     "Dans **Chaînes → ta chaîne → Voix**, choisis **BELNOVIA VOICE**, écoute les voix, choisis-en une et enregistre.",
+     "Pour utiliser ta propre voix (Studio Pro) : fais un court enregistrement dans la section **Signature** du Studio vocal ; quand **Préparation de Belnovia Signature** est terminé, ta voix apparaît dans la liste des voix de la chaîne."
     ],
-    "note": "Si G-Labs ne fonctionne pas, tu peux ajouter tes propres images avec le bouton **Importer des images** de l'onglet Images de la vidéo."
+    "note": "Tu peux aussi ajouter une clé Lumean ou ElevenLabs (payant, optionnel).",
+    "id": "voice"
+   },
+   {
+    "h": "✦ Belnovia Labs (images et animation)",
+    "intro": "Scènes, miniatures et animations sont dessinées avec ton propre compte Google. Pas d'appli en plus ni de clé.",
+    "steps": [
+     "Ouvre **Studio d'images** dans le menu de gauche.",
+     "Sous **Comptes Google**, appuie sur **Ajouter un compte** et connecte-toi avec ton compte Google.",
+     "À l'étape de démarrage **Qui doit dessiner les images ?**, choisis **BELNOVIA LABS** et appuie sur **Dessiner une image test** ; si une image arrive en 30 à 90 secondes, tout est prêt."
+    ],
+    "note": "Si tu utilises G-Labs, choisis **Programme G-Labs** à la même étape et colle sa clé Webhook.",
+    "id": "labs"
    },
    {
     "id": "youtube",
@@ -418,7 +338,7 @@ window.SETUP = {
      "Sur la page **Branding**, indique les adresses de ton site ou de ta chaîne pour **Application home page**, **privacy policy** et **terms of service**, ajoute ce domaine dans **Authorized domains** et clique sur **Save**. N'ajoute pas de logo : avec un logo, Google demande un long examen.",
      "**Audience → Publish app → Confirm**. Le statut doit être **In production**. Sans cette étape, la connexion se coupe tous les 7 jours.",
      "**Clients → Create client → Desktop app → Create**. Copie le **Client ID** et le **Client secret** ; le secret n'est plus affiché après la fermeture (tu peux garder une copie avec **Download JSON**).",
-     "Dans Belnovia Studio, colle le Client ID et le Client Secret dans **Paramètres → YouTube** et enregistre.",
+     "Dans Belnovia Studio Pro, colle le Client ID et le Client Secret dans **Paramètres → YouTube** et enregistre.",
      "Dans **Chaînes → ta chaîne → Publication**, clique sur **Connecter avec Google** et choisis le compte Google de la chaîne. À « Google n'a pas validé cette application », choisis **Paramètres avancés → Accéder à (nom de l'app)** : c'est ta propre app, donc sans risque. Accepte les autorisations."
     ],
     "note": "Si tu n'as pas de site et que Publish app reste désactivé, écris-nous, on règle ça ensemble : servicescriptorium@gmail.com"
@@ -427,7 +347,7 @@ window.SETUP = {
  },
  "pt": {
   "title": "Guia de configuração",
-  "lead": "Vais configurar o Belnovia Studio pela primeira vez? Segue esta ordem; cada parte leva poucos minutos. Nunca partilhes as tuas chaves: cola-as apenas nos campos da app.",
+  "lead": "Se estás a instalar o Belnovia Studio Pro pela primeira vez, segue esta ordem. Texto, voz e imagens não precisam de chaves; os passos de configuração na primeira abertura do programa levam-te pela mesma ordem.",
   "toc": "Nesta página",
   "sections": [
    {
@@ -435,62 +355,46 @@ window.SETUP = {
     "h": "Instalar o programa",
     "intro": "Baixe o instalador somente deste site. Não precisa de permissão de administrador.",
     "steps": [
-     "Clique duas vezes no **BelnoviaStudio-Kurulum.exe** que você baixou.",
+     "Clique duas vezes no **BelnoviaStudioPro-Setup.exe** que você baixou.",
      "Se aparecer **O Windows protegeu o computador**, clique em **Mais informações** e depois em **Executar assim mesmo**.",
      "Na janela de instalação, clique em **Continuar** → aceite os termos de uso → **Instalar**.",
-     "Com **Abrir o Belnovia Studio agora** marcado, clique em **Concluir**. A partir de agora o programa fica no menu Iniciar e na área de trabalho.",
+     "Com **Abrir o Belnovia Studio Pro agora** marcado, clique em **Concluir**. A partir de agora o programa fica no menu Iniciar e na área de trabalho.",
      "Se o navegador avisar durante o download, escolha **Manter**."
     ],
     "note": "Esse aviso aparece porque poucas pessoas baixaram o programa até agora; não significa que algo prejudicial foi encontrado. A partir de agora, as atualizações chegam sozinhas dentro do programa; você não precisa executar o instalador de novo."
    },
    {
-    "id": "claude",
-    "h": "Chave de API do Claude (histórias e títulos)",
-    "intro": "Para a IA que escreve histórias, títulos e descrições. Usas Grok ou ChatGPT? Faz os mesmos passos em [console.x.ai](https://console.x.ai) ou [platform.openai.com](https://platform.openai.com).",
+    "h": "✦ Belnovia AI (histórias e títulos)",
+    "intro": "A IA do próprio programa escreve a história, os títulos, as descrições e os prompts de imagem. É grátis e não precisa de chave.",
     "steps": [
-     "Vai a [console.anthropic.com](https://console.anthropic.com) e inicia sessão (ou cria uma conta grátis).",
-     "Adiciona saldo em **Billing**; o uso é descontado desse saldo.",
-     "No menu à esquerda abre **Access → API keys**.",
-     "Clica em **Create key**. Se aparecer uma janela de \"identity federation\", escolhe **Continue with an API key**.",
-     "Dá-lhe um nome, por exemplo **belnovia**. Em **Expires** escolhe **Never** ou um período longo para o teu computador principal: uma chave expirada para a app.",
-     "Copia a nova chave **sk-ant-…** com **Copy**. Depois de fechares a janela, não volta a ser mostrada.",
-     "No Belnovia Studio cola-a em **Configurações → Chaves → Claude** e clica em **Salvar e testar**. Deves ver **Salva (criptografada)**."
+     "Quando abres o programa pela primeira vez, o Belnovia AI instala-se sozinho no teu computador; no canto aparece o indicador **✦ A preparar o Belnovia… %**.",
+     "Não precisas de esperar: enquanto instala, o **✦ Belnovia AI Plus** faz o trabalho. Recebes um saldo Plus gratuito todos os meses.",
+     "No passo inicial **Quem vai escrever a história?**, confirma que o **✦ Belnovia AI** está selecionado e carrega em **Continuar**."
     ],
-    "note": "Nunca envies a tua chave por e-mail, mensagem ou captura de ecrã. A equipa Belnovia nunca te vai pedir uma chave."
+    "note": "Para um desempenho ainda melhor, podes adicionar uma chave do Claude, ChatGPT ou Grok em **Configurações → IA** (opcional, pago). Obtém a chave em [console.anthropic.com](https://console.anthropic.com), [platform.openai.com](https://platform.openai.com) ou [console.x.ai](https://console.x.ai); o **Guia ilustrado** do programa mostra cada passo.",
+    "id": "ai"
    },
    {
-    "id": "lumean",
-    "h": "Chave do Lumean (vozes naturais)",
-    "intro": "Para narrar os teus vídeos com vozes realistas. É um serviço pago; a opção gratuita é o Kokoro.",
+    "h": "✦ Belnovia Voice (narração)",
+    "intro": "O estúdio de voz que narra os teus vídeos vem integrado. As vozes profissionais prontas funcionam grátis no teu computador.",
     "steps": [
-     "Cria uma conta em [lumean.net](https://lumean.net/en) e escolhe um plano.",
-     "Cria uma chave de API na secção API da tua conta Lumean e copia-a.",
-     "No Belnovia Studio cola-a em **Configurações → Chaves → Lumean** e clica em **Salvar e testar**.",
-     "Em **Canais → o teu canal → Voz** escolhe o Lumean e um modelo de voz, ouve e guarda."
-    ]
-   },
-   {
-    "id": "kokoro",
-    "h": "Kokoro (voz gratuita)",
-    "intro": "O Kokoro não precisa de conta: é descarregado uma vez e funciona no teu computador. Tem vozes em inglês americano e britânico.",
-    "steps": [
-     "Abre o ecrã **Montagem** no Belnovia Studio.",
-     "Clica no botão de instalação do Kokoro e espera que a transferência termine. É uma transferência única e bastante grande.",
-     "Em **Canais → o teu canal → Voz** escolhe **Kokoro**, ouve as vozes, escolhe uma e guarda."
-    ]
-   },
-   {
-    "id": "glabs",
-    "h": "G-Labs (imagens)",
-    "intro": "As imagens são criadas pelo programa G-Labs no teu computador, com as tuas próprias contas Google Flow. Se o G-Labs não tiver nenhuma conta Flow adicionada, não é possível criar imagens.",
-    "steps": [
-     "Instala e abre o G-Labs com a tua própria assinatura.",
-     "Em **G-Labs → Definições → Contas Flow** adiciona pelo menos uma conta Google. Se aparecer **Ativas: 0 contas**, as imagens não podem ser criadas.",
-     "Ativa o servidor Webhook no G-Labs e copia a **chave do Webhook**.",
-     "No Belnovia Studio abre **Configurações → Imagens**, escolhe **G-Labs (automático)**, cola a chave do Webhook e guarda.",
-     "Testa a ligação com **Verificação do sistema** nas Configurações."
+     "Abre o **Estúdio de voz** no menu à esquerda; o motor de voz prepara-se sozinho na primeira vez.",
+     "Em **Canais → o teu canal → Voz**, escolhe **BELNOVIA VOICE**, ouve as vozes, escolhe uma e guarda.",
+     "Para usares a tua própria voz (Studio Pro): faz uma gravação curta na secção **Signature** do Estúdio de voz; quando **A preparar o Belnovia Signature** terminar, a tua voz aparece na lista de vozes do canal."
     ],
-    "note": "Se o G-Labs não funcionar, podes adicionar as tuas próprias imagens com o botão **Importar imagens** no separador Imagens do vídeo."
+    "note": "Também podes adicionar uma chave do Lumean ou do ElevenLabs (pago, opcional).",
+    "id": "voice"
+   },
+   {
+    "h": "✦ Belnovia Labs (imagens e animação)",
+    "intro": "Cenas, miniaturas e animações são desenhadas com a tua própria conta Google. Sem apps extra nem chaves.",
+    "steps": [
+     "Abre o **Estúdio de imagem** no menu à esquerda.",
+     "Em **Contas Google**, carrega em **Adicionar conta** e inicia sessão com a tua conta Google.",
+     "No passo inicial **Quem deve desenhar as imagens?**, escolhe **BELNOVIA LABS** e carrega em **Desenhar imagem de teste**; se chegar uma imagem em 30–90 segundos, está tudo pronto."
+    ],
+    "note": "Se usas o G-Labs, escolhe o **Programa G-Labs** no mesmo passo e cola a respetiva chave de Webhook.",
+    "id": "labs"
    },
    {
     "id": "youtube",
@@ -503,7 +407,7 @@ window.SETUP = {
      "Na página **Branding** escreve os endereços do teu site ou canal em **Application home page**, **privacy policy** e **terms of service**, adiciona esse domínio em **Authorized domains** e clica em **Save**. Não carregues um logótipo: com logótipo a Google pede uma revisão longa.",
      "**Audience → Publish app → Confirm**. O estado tem de ser **In production**. Sem este passo a ligação cai a cada 7 dias.",
      "**Clients → Create client → Desktop app → Create**. Copia o **Client ID** e o **Client secret**; o secret não volta a aparecer depois de fechares a janela (podes guardar uma cópia com **Download JSON**).",
-     "No Belnovia Studio cola o Client ID e o Client Secret em **Configurações → YouTube** e guarda.",
+     "No Belnovia Studio Pro cola o Client ID e o Client Secret em **Configurações → YouTube** e guarda.",
      "Em **Canais → o teu canal → Publicação** clica em **Conectar com Google** e escolhe a conta Google do canal. Em \"A Google não validou esta app\" escolhe **Avançadas → Aceder a (nome da app)**: é a tua própria app, por isso é seguro. Aceita as permissões."
     ],
     "note": "Se não tiveres site e o Publish app continuar desativado, escreve-nos e resolvemos juntos: servicescriptorium@gmail.com"

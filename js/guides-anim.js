@@ -1,4 +1,4 @@
-/* Belnovia Studio: animated setup guides.
+/* Belnovia Studio Pro: animated setup guides.
    Usage: <div class="guide-anim" data-guide="claude|lumean|glabs|kokoro|youtube|windows"></div>
    The animation is a pure function of time (render(t)), so the same code plays on the page and
    renders the MP4 versions frame by frame. Third-party screens are simplified schematics with the
@@ -71,12 +71,12 @@
     moreinfo: C("Ek bilgi", "More info", "Weitere Informationen", "Más información", "Informations complémentaires", "Mais informações"),
     runany: C("Yine de çalıştır", "Run anyway", "Trotzdem ausführen", "Ejecutar de todas formas", "Exécuter quand même", "Executar mesmo assim"),
     dontrun: C("Çalıştırma", "Don't run", "Nicht ausführen", "No ejecutar", "Ne pas exécuter", "Não executar"),
-    appline: C("Uygulama: BelnoviaStudio-Kurulum.exe", "App: BelnoviaStudio-Kurulum.exe", "App: BelnoviaStudio-Kurulum.exe", "Aplicación: BelnoviaStudio-Kurulum.exe", "Application : BelnoviaStudio-Kurulum.exe", "Aplicação: BelnoviaStudio-Kurulum.exe"),
+    appline: C("Uygulama: BelnoviaStudioPro-Setup.exe", "App: BelnoviaStudioPro-Setup.exe", "App: BelnoviaStudioPro-Setup.exe", "Aplicación: BelnoviaStudioPro-Setup.exe", "Application : BelnoviaStudioPro-Setup.exe", "Aplicação: BelnoviaStudioPro-Setup.exe"),
     downloads: C("İndirilenler", "Downloads", "Downloads", "Descargas", "Téléchargements", "Transferências"),
     gwarn: C("Google bu uygulamayı doğrulamadı", "Google hasn't verified this app", "Google hat diese App nicht überprüft", "Google no ha verificado esta aplicación", "Google n'a pas validé cette application", "A Google não validou esta app"),
     gwarnbody: C("Bu uygulamayı kendi Google Cloud projende sen oluşturdun.", "You created this app in your own Google Cloud project.", "Du hast diese App in deinem eigenen Google-Cloud-Projekt erstellt.", "Creaste esta aplicación en tu propio proyecto de Google Cloud.", "Tu as créé cette application dans ton propre projet Google Cloud.", "Criaste esta app no teu próprio projeto Google Cloud."),
     advanced: C("Gelişmiş", "Advanced", "Erweitert", "Configuración avanzada", "Paramètres avancés", "Avançadas"),
-    goto: C("Belnovia Studio'ya git (güvenli değil)", "Go to Belnovia Studio (unsafe)", "Weiter zu Belnovia Studio (unsicher)", "Ir a Belnovia Studio (no seguro)", "Accéder à Belnovia Studio (non sécurisé)", "Aceder a Belnovia Studio (não seguro)"),
+    goto: C("Belnovia Studio Pro'ya git (güvenli değil)", "Go to Belnovia Studio Pro (unsafe)", "Weiter zu Belnovia Studio Pro (unsicher)", "Ir a Belnovia Studio Pro (no seguro)", "Accéder à Belnovia Studio Pro (non sécurisé)", "Aceder a Belnovia Studio Pro (não seguro)"),
     backsafe: C("Güvenli sayfaya dön", "Back to safety", "Zurück zur sicheren Seite", "Volver a un sitio seguro", "Retour à la sécurité", "Voltar à segurança"),
     lumhome: C("Ana sayfa", "Home", "Start", "Inicio", "Accueil", "Início"),
     lumvoices: C("Sesler", "Voices", "Stimmen", "Voces", "Voix", "Vozes"),
@@ -87,7 +87,7 @@
     play: C("Oynat", "Play", "Abspielen", "Reproducir", "Lire", "Reproduzir"),
     pause: C("Duraklat", "Pause", "Pause", "Pausa", "Pause", "Pausa"),
     replay: C("Baştan", "Replay", "Neu starten", "Repetir", "Rejouer", "Repetir"),
-    kicker: C("Belnovia Studio · Kurulum rehberi", "Belnovia Studio · Setup guide", "Belnovia Studio · Einrichtung", "Belnovia Studio · Guía de configuración", "Belnovia Studio · Guide d'installation", "Belnovia Studio · Guia de configuração"),
+    kicker: C("Belnovia Studio Pro · Kurulum rehberi", "Belnovia Studio Pro · Setup guide", "Belnovia Studio Pro · Einrichtung", "Belnovia Studio Pro · Guía de configuración", "Belnovia Studio Pro · Guide d'installation", "Belnovia Studio Pro · Guia de configuração"),
     done: C("Hazır!", "Done!", "Fertig!", "¡Listo!", "C'est prêt !", "Pronto!")
   };
 
@@ -339,7 +339,7 @@
           cap: C("APIs & Services → Library'de YouTube Data API v3'ü bul, Enable'a bas.", "In APIs & Services → Library find YouTube Data API v3 and press Enable.", "Unter APIs & Services → Library YouTube Data API v3 suchen und Enable drücken.", "En APIs & Services → Library busca YouTube Data API v3 y pulsa Enable.", "Dans APIs & Services → Library, trouve YouTube Data API v3 et clique sur Enable.", "Em APIs & Services → Library procura YouTube Data API v3 e carrega em Enable.") },
         { scene: "gc3", d: 7.2, els: web("console.cloud.google.com/auth/branding").concat(gcSide("y_br")).concat([
             { id: "br_h", k: "h", x: CX, y: CY - 6, w: 800, h: 50, t: "Branding", cls: "light" },
-            { id: "br1", k: "field", x: CX, y: CY + 60, w: 520, h: 50, v: "Belnovia Studio", cls: "light" },
+            { id: "br1", k: "field", x: CX, y: CY + 60, w: 520, h: 50, v: "Belnovia Studio Pro", cls: "light" },
             { id: "br2", k: "field", x: CX + 540, y: CY + 60, w: 480, h: 50, v: "ornek@gmail.com", cls: "light" },
             { id: "br3", k: "field", x: CX, y: CY + 130, w: 1020, h: 50, v: "https://ornek-siteniz.com", cls: "light" },
             { id: "br4", k: "field", x: CX, y: CY + 196, w: 1020, h: 50, v: "https://ornek-siteniz.com/gizlilik", cls: "light" },
@@ -362,7 +362,7 @@
             { id: "cl_l", k: "label", x: CX, y: CY + 70, w: 500, h: 34, t: "Application type", cls: "light" },
             { id: "cl_t", k: "select", x: CX, y: CY + 110, w: 520, h: 56, v: "Desktop app", cls: "light" },
             { id: "cl_l2", k: "label", x: CX, y: CY + 190, w: 500, h: 34, t: "Name", cls: "light" },
-            { id: "cl_n", k: "field", x: CX, y: CY + 230, w: 520, h: 56, v: "Belnovia Studio", cls: "light" },
+            { id: "cl_n", k: "field", x: CX, y: CY + 230, w: 520, h: 56, v: "Belnovia Studio Pro", cls: "light" },
             { id: "cl_b", k: "btn", x: CX, y: CY + 320, w: 160, h: 56, t: "Create", cls: "blue" },
             { id: "veil", k: "veil", x: WX + 1, y: WY + BAR, w: WW - 2, h: WH - BAR - 1, hide: true },
             { id: "cd", k: "dialog", x: 470, y: 150, w: 660, h: 460, cls: "light", hide: true },
@@ -402,7 +402,7 @@
           ]), target: "gw_adv", after: { gw_go: { show: true } },
           cap: C("\"Google bu uygulamayı doğrulamadı\" çıkarsa Gelişmiş'e tıkla. Uygulama senin, güvenli.", "If \"Google hasn't verified this app\" appears, click Advanced. It's your own app.", "Erscheint \"Google hat diese App nicht überprüft\", klicke auf Erweitert. Es ist deine eigene App.", "Si aparece \"Google no ha verificado esta aplicación\", haz clic en Configuración avanzada. Es tu propia app.", "Si « Google n'a pas validé cette application » s'affiche, clique sur Paramètres avancés. C'est ta propre application.", "Se aparecer \"A Google não validou esta app\", clica em Avançadas. A app é tua.") },
         { target: "gw_go", after: {},
-          cap: C("Belnovia Studio'ya git'e tıkla ve izinleri onayla.", "Click Go to Belnovia Studio and allow the permissions.", "Klicke auf Weiter zu Belnovia Studio und erlaube die Berechtigungen.", "Haz clic en Ir a Belnovia Studio y acepta los permisos.", "Clique sur Accéder à Belnovia Studio et autorise les permissions.", "Clica em Aceder a Belnovia Studio e autoriza as permissões.") },
+          cap: C("Belnovia Studio Pro'ya git'e tıkla ve izinleri onayla.", "Click Go to Belnovia Studio Pro and allow the permissions.", "Klicke auf Weiter zu Belnovia Studio Pro und erlaube die Berechtigungen.", "Haz clic en Ir a Belnovia Studio Pro y acepta los permisos.", "Clique sur Accéder à Belnovia Studio Pro et autorise les permissions.", "Clica em Aceder a Belnovia Studio Pro e autoriza as permissões.") },
         { scene: "bel2", els: null, from: "bel2", target: null, at: 0.4, after: { pb_ok: { show: true } }, d: 4,
           cap: C("Kanal bağlandı.", "Channel connected.", "Kanal verbunden.", "Canal conectado.", "Chaîne connectée.", "Canal ligado.") }
       ]
@@ -416,10 +416,10 @@
       end: C("Program açıldı. Hesabını oluşturabilirsin.", "The program is open. You can create your account.", "Das Programm ist offen. Du kannst dein Konto anlegen.", "El programa está abierto. Ya puedes crear tu cuenta.", "Le programme est ouvert. Tu peux créer ton compte.", "O programa está aberto. Já podes criar a tua conta."),
       steps: [
         { scene: "dl", els: frame("ex", { title: W.downloads }, true).concat([
-            { id: "f1", k: "file", x: WX + 60, y: CY + 30, w: 640, h: 64, t: "BelnoviaStudio-Kurulum.exe" },
+            { id: "f1", k: "file", x: WX + 60, y: CY + 30, w: 640, h: 64, t: "BelnoviaStudioPro-Setup.exe" },
             { id: "f2", k: "row", x: WX + 60, y: CY + 110, w: 640, h: 56, t: "", cls: "light" }
           ]), target: "f1",
-          cap: C("İndirdiğin BelnoviaStudio-Kurulum.exe'ye çift tıkla.", "Double-click the BelnoviaStudio-Kurulum.exe you downloaded.", "Doppelklicke auf die heruntergeladene BelnoviaStudio-Kurulum.exe.", "Haz doble clic en el BelnoviaStudio-Kurulum.exe que descargaste.", "Double-clique sur le BelnoviaStudio-Kurulum.exe téléchargé.", "Faz duplo clique no BelnoviaStudio-Kurulum.exe que transferiste.") },
+          cap: C("İndirdiğin BelnoviaStudioPro-Setup.exe'ye çift tıkla.", "Double-click the BelnoviaStudioPro-Setup.exe you downloaded.", "Doppelklicke auf die heruntergeladene BelnoviaStudioPro-Setup.exe.", "Haz doble clic en el BelnoviaStudioPro-Setup.exe que descargaste.", "Double-clique sur le BelnoviaStudioPro-Setup.exe téléchargé.", "Faz duplo clique no BelnoviaStudioPro-Setup.exe que transferiste.") },
         { scene: "ss", els: [
             { id: "ss", k: "dialog", x: 330, y: 90, w: 940, h: 620, cls: "win" },
             { id: "ss_t", k: "wintitle", x: 380, y: 140, w: 840, h: 110, t: W.winprot },
@@ -436,7 +436,7 @@
         { scene: "inst", els: [
             { id: "in_box", k: "dialog", x: 430, y: 110, w: 740, h: 560 },
             { id: "in_logo", k: "logo", x: 763, y: 150, w: 74, h: 74 },
-            { id: "in_h", k: "h", x: 480, y: 250, w: 640, h: 50, t: C("Belnovia Studio kuruluyor", "Installing Belnovia Studio", "Belnovia Studio wird installiert", "Instalando Belnovia Studio", "Installation de Belnovia Studio", "Instalando o Belnovia Studio") },
+            { id: "in_h", k: "h", x: 480, y: 250, w: 640, h: 50, t: C("Belnovia Studio Pro kuruluyor", "Installing Belnovia Studio Pro", "Belnovia Studio Pro wird installiert", "Instalando Belnovia Studio Pro", "Installation de Belnovia Studio Pro", "Instalando o Belnovia Studio Pro") },
             { id: "in_l", k: "label", x: 480, y: 330, w: 640, h: 34, t: C("Kullanım koşullarını okudum ve kabul ediyorum", "I have read and accept the terms of use", "Ich akzeptiere die Nutzungsbedingungen", "Acepto las condiciones de uso", "J'accepte les conditions d'utilisation", "Aceito os termos de uso") },
             { id: "in_b", k: "btn", x: 640, y: 560, w: 320, h: 58, t: C("Kur", "Install", "Installieren", "Instalar", "Installer", "Instalar"), cls: "primary" }
           ], target: "in_b",
@@ -444,8 +444,8 @@
         { scene: "inst2", els: [
             { id: "in_box", k: "dialog", x: 430, y: 110, w: 740, h: 560 },
             { id: "in_logo", k: "logo", x: 763, y: 150, w: 74, h: 74 },
-            { id: "in_h", k: "h", x: 480, y: 250, w: 640, h: 50, t: C("Belnovia Studio kuruldu", "Belnovia Studio is installed", "Belnovia Studio ist installiert", "Belnovia Studio está instalado", "Belnovia Studio est installé", "O Belnovia Studio foi instalado") },
-            { id: "in_l", k: "label", x: 480, y: 330, w: 640, h: 34, t: C("Belnovia Studio'yu şimdi aç", "Open Belnovia Studio now", "Belnovia Studio jetzt öffnen", "Abrir Belnovia Studio ahora", "Ouvrir Belnovia Studio maintenant", "Abrir o Belnovia Studio agora") },
+            { id: "in_h", k: "h", x: 480, y: 250, w: 640, h: 50, t: C("Belnovia Studio Pro kuruldu", "Belnovia Studio Pro is installed", "Belnovia Studio Pro ist installiert", "Belnovia Studio Pro está instalado", "Belnovia Studio Pro est installé", "O Belnovia Studio Pro foi instalado") },
+            { id: "in_l", k: "label", x: 480, y: 330, w: 640, h: 34, t: C("Belnovia Studio Pro'yu şimdi aç", "Open Belnovia Studio Pro now", "Belnovia Studio Pro jetzt öffnen", "Abrir Belnovia Studio Pro ahora", "Ouvrir Belnovia Studio Pro maintenant", "Abrir o Belnovia Studio Pro agora") },
             { id: "in_f", k: "btn", x: 640, y: 560, w: 320, h: 58, t: C("Bitir", "Finish", "Fertigstellen", "Finalizar", "Terminer", "Concluir"), cls: "primary" }
           ], target: "in_f",
           cap: C("Bitir'e bas. Program Başlat menüsüne ve masaüstüne eklendi; güncellemeler artık kendiliğinden gelir.", "Press Finish. The program is in the Start menu and on the desktop; updates now arrive by themselves.", "Klicke auf Fertigstellen. Das Programm ist im Startmenü und auf dem Desktop; Updates kommen nun automatisch.", "Pulsa Finalizar. El programa está en el menú Inicio y en el escritorio; las actualizaciones llegan solas.", "Clique sur Terminer. Le programme est dans le menu Démarrer et sur le bureau ; les mises à jour arrivent toutes seules.", "Clique em Concluir. O programa está no menu Iniciar e na área de trabalho; as atualizações chegam sozinhas.") },
